@@ -1,0 +1,77 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd,mathrsfs,mathtools}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{caption}
+\usepackage{hyperref}
+
+
+
+\theoremstyle{plain}
+    \newtheorem{thm}{Theorem}[section]
+    \newtheorem{lem}[thm]   {Lemma}
+    \newtheorem{cor}[thm]   {Corollary}
+
+\theoremstyle{definition}
+    \newtheorem{defn}[thm]  {Definition}
+    \newtheorem{conj}[thm]{Conjecture}
+
+\input{macros.tex}
+    
+\begin{document}
+
+\title{Splitting of the homology of the puntured mapping class group.}
+
+\author{Andrea Bianchi}
+
+\address{Mathematics Institute,
+University of Bonn,
+Endenicher Allee 60, Bonn,
+Germany
+}
+
+
+
+\email{bianchi@math.uni-bonn.de}
+
+\date{\today}
+
+
+%\keywords{Topological complexity, aspherical spaces, Lusternik-Schnirelmann category, cohomological dimension, topological robotics, braid groups}
+%\subjclass[2010]{55M99, 55P20 (Primary); 55M30, 20J06, 68T40 (Secondary).}
+
+\begin{abstract}
+Let $\ggm$ be the mapping class group of an orientable surface of genus $g$ with one parametrised
+boundary component and $m$ permutable punctures; let $\gg=\gg^0$; let $\bms$ be the braod group 
+of the surface $\sg$ on $m$ strands; let $\F$ be $\Z_2$ or $\Q$. We prove that $H_*(\ggm;\F)\cong H_*(\gg;H_*(\bms;\F))$.
+We compute (?) the right hand side explicitly for $g=1$.
+\end{abstract}
+
+%\thanks{}
+
+\maketitle
+
+\input{Introduction.tex}
+
+\input{Preliminaries.tex}
+
+\input{HBraidSurf.tex}
+
+\input{ThmModTwo.tex}
+
+\input{Sink.tex}
+
+\input{ThmQ.tex}
+
+\input{GenusOne.tex}
+
+\input{Conclusions.tex}
+
+\bibliography{bibliography.bib}{}
+\bibliographystyle{plain}
+
+\end{document}
+
+
+
+
