@@ -1,0 +1,84 @@
+\section{Preliminaries}
+In this section we recollect some classical definitions and results about braid groups and mapping class groups.
+By $\sg$ we will always denote a compact, smooth, orientable surface of genus $g$ with one parametrised
+boundary component $\partial \sg$; by $\sgm$ we denote a surface $\sg$ with a choice of $m$ distinct
+points in the interior: these points are called \emph{punctures} and are not assumed to be ordered
+or labelled.
+
+\begin{defn}
+ The $m$-th \emph{ordered configuration space} of a surface $\sg$ is the space
+\[
+ F_m(\sg)=\set{(p_1,\dots,p_m) \in \pa{\mathring{\Sigma}_{g,1}}^{\times m}  \,|\,  p_i\neq p_j  \,\forall i\neq j}
+\]
+ Notice that we require the points of the configuration to lie in the interior of $\sg$.
+ Thus $F_m(\sg)$ is naturally endowed with the structure of a smooth, orientable $2m-$dimensional
+ manifold.
+ 
+ The symmetric group $\mathfrak{S}_m$ acts freely on $F_m(\sg)$ by permuting the points of a configuration;
+ the orbit space
+ \[
+ F_m(\sg)/\mathfrak{S}_m
+ \]
+ is called the \emph{$m-$th unordered configuration space}
+ of $\sg$ and denoted by $C_m(\sg)$; this space is also a $2m-$dimensional orientable manifold.
+ 
+%  
+%  We denote by $C_k(\sg)^c$ the one-point compactification of the space $C_k(\sg)$; the point
+%  at infinity is denoted by $*$ and serves as basepoint.
+\end{defn}
+
+A classical result by Fadell and Neuwirth (\cite{FadellNeuwirth}) ensures
+that $C_m(\sg)$ is aspherical; the fundamental group $\pi_1(C_m(\sg))$ is
+called the \emph{braid group on $m$ strands of $\sg$} and is denoted by $\bms$.
+
+\begin{defn}
+ \label{def:mcg}
+ Let $\Diff(\sg)$ be the group of diffeomorphisms of $\sg$ that fix $\partial\sg$ pointwise,
+ endowed with the Whitney $C^{\infty}-$topology. We denote by $\gg=\pi_0(\Diff(\sg))$ its group of connected
+ components, called also the \emph{mapping class group} of $\sg$.
+ 
+ Similarly let $\Diff(\sgm)$ be the group of diffeomorphisms of $\sgm$ that fix $\partial(\sg)$
+ pointwise and permute the $m$ punctures, and let $\ggm=\pi_0(\Diff(\sgm))$ be its
+ group of connected components, called the mapping class group of $\sgm$.
+ \end{defn}
+ A classical result by Earle and Schatz (\cite{EarleSchatz}) ensures that the connected components
+ of $\Diff(\sg)$ are contractible. In particular $B\Diff(\sg)\simeq B\gg$ is a classifying space for
+ the group $\gg$ and we call $\cF_{g,1}\to B\gg$ the universal $\sg-$bundle over $B\gg$, corresponding to
+ the bundle
+ \[
+  \sg\times_{\Diff(\sg)}E\Diff(\sg)\to B\Diff(\sg).
+ \]
+Applying the construction of the $m-$th unordered configuration space fiberwise we obtain a bundle
+$C_m(\cF_{g,1})\to B\gg$ with fiber $C_m(\sg)$.
+
+The space $C_m(\cF_{g,1})$ is a classifying space for the
+group $\ggm$ and the Birman exact sequence \ref{eq:Birman} is obtained by taking fundamental
+groups of the spaces
+\begin{equation}\label{eq:Birmanbundle}
+C_m(\sg)\to C_m(\cF_{g,1})\to B\gg.
+\end{equation}
+
+% \begin{defn}
+%  \label{def:modulispaces}
+% We denote by $\mg$ the moduli space of Riemann surfaces $\sg$ of genus $g$ 
+%  with one parametrised
+%  boundary component, and by $\mgm$ the moduli space of Riemann surfaces $\sgm$ with one
+%  parametrised boundary component and $m$ unordered punctures.
+%  There is a natural fiber bundle map
+%  \[
+%   \pi\colon \mgm\to\mg
+%  \]
+% which forgets the position of the punctures. The fiber of $\pi$ is the configuration space of $m$ unordered
+% points in the interior of $\sg$, i.e.
+% \[
+%  C_m(\sg)=\set{(p_1,\dots,p_m) \in \mathring{\sgigma}_{g,1}^m  \,|\,  p_i\neq p_j  \,\forall i\neq j}
+% \]
+% \end{defn}
+% 
+% The Birman exact sequence \ref{eq:Birman} can be obtained from the bundle
+% \begin{equation}\label{eq:Birmanbundle}
+%  C_m(\sg)\to\mgm\to\mg
+% \end{equation}
+% by computing all fundamental groups: indeed the three spaces appearing in \ref{eq:Birmanbundle} are
+% the classifying spaces of the groups in \ref{eq:Birman}.
+

@@ -7,9 +7,9 @@ diffeomorphisms are required to fix $\partial\sg$ pointwise; similarly let $\ggm
 the group of isotopy classes of diffeomorphisms of $\sgm$ that fix $\partial\sgm$ pointwise and \emph{permute} the $m$ punctures.
 
 Forgetting punctures yields a surjective map $\ggm\to\gg$ with kernel $\bms$,
-the $m-$th \emph{braid group} of the surface $\sg$: we get the Birman exact sequence
+the $m-$th \emph{braid group} of the surface $\sg$: we get the Birman exact sequence (see \cite{Birman:mcgbr}):
 \begin{equation}
-\label{eqn:Birman}
+\label{eq:Birman}
 1\to\bms\to\ggm\to\gg\to 1.
 \end{equation}
 % This short exact sequence corresponds to 
@@ -24,19 +24,26 @@ the $m-$th \emph{braid group} of the surface $\sg$: we get the Birman exact sequ
 % action of the symmetric group $\S_m$ that permutes the (ordered list of) points in the configuration; $\mg$ and $\mgm$
 % are the moduli spaces of Riemann structures on $\sg$ and $\sgm$ respectively.
 
-The associated Leray-Serre spectral sequence in rational homology has a second page $E^2_{p,q}=H_p(\gg;H_q(\bms;\Q))$,
-and converges to $H_{p+q}(\ggm;\Q)$.
+The associated Leray-Serre spectral sequence in $\Z_2-$homology has a second page $E^2_{p,q}=H_p(\gg;H_q(\bms;\Z_2))$,
+and converges to $H_{p+q}(\ggm;\Z_2)$.
 
 Our main theorem is that the spectral sequence has already collapsed in its second page.
 \begin{thm}
 \label{thm:main}
-For each $l\geq 0$ there is an isomorphism of $\Q$-vector spaces
+For each $l\geq 0$ there is an isomorphism
 \begin{equation}
-\label{eqn:main}
- H_l(\ggm;\Q)\cong \bigoplus_{p+q=l} H_p(\gg;H_q(\bms;\Q)).
+\label{eq:main}
+ H_l(\ggm;\Z_2)\cong \bigoplus_{p+q=l} H_p(\gg;H_q(\bms;\Z_2)).
 \end{equation}
 \end{thm}
-Thus the computation of $H_*(\ggm;\Q)$ reduces to the computation of the homology of $\gg$ with
-twisted coefficients in the representation $H_*(\bms;\Q)$: the action of $\gg$ is quite explicit
-and in particular is symplectic. The group $\gg$ is significantly smaller than $\ggm$, so the
-computation of the right-hand side of equation \ref{eqn:main} should be more tractable. From now on $\Q$-coefficients will always be understood.
+Thus the computation of $H_*(\ggm;\Z_2)$ reduces to the computation of the homology of $\gg$ with
+twisted coefficients in the representation $H_*(\bms;\Z_2)$: as we will see the $\ggm-$representation
+$H_*(\bms;\Z_2)$ splits as a direct sum of symmetric powers of $H_1(\sg)$.
+In particular this representation is symplectic: this had already benn stated in \cite{LM}.
+
+The group $\gg$ is significantly smaller than $\ggm$, so the
+computation of the right-hand side of equation \ref{eq:main}
+should be more tractable.
+WE DO THIS COMPUTATION FOR $g=1$.
+
+From now on $\Z_2$-coefficients will always be understood if no coefficients are specified.
