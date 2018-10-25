@@ -1,0 +1,617 @@
+\section{Action of $\gg$}
+We now turn back to \emph{homology} of $\cms$; we will first prove the full statement of theorem
+\ref{thm:Hbms*as*ggrep} in bidigrees $(*,m)$ with $*=m$, and then extend it to other bidegrees.
+
+\subsection{Bidigrees of the form $(m,m)$}
+In this subsection we construct a $\gg-$equivariant isomorphism 
+\[
+\psi_m\colon \Sym_m(\H))\to H_m(\cms).
+\]
+% the former group is isomorphic to $\Sym_m(H^1(\S))$ and the second to $H^m(\cms)$,
+% both by Poincaré-Lefschetz duality.
+
+We already know that these $\Z_2-$vector spaces have the same dimension:
+for the dimension of $H_m(\cms)$ we have to count the monomials of degree $m$ and weight $m$
+in the right-hand side of equation \ref{eq:isovectorspaces}; a monomial whose
+weight is \emph{equal} and not bigger than its degree cannot contain factors of the form
+$Q^i\epsilon$, i.e. it must lie in the factor $\Sym_{\bullet}(\H)$, and if the degree
+is $m$ it must lie in $\Sym_m(\H)$.
+% 
+% The rough idea in constructing the map $\psi_m$ is the following: $\Sym_m(\H)$ is generated
+% by elements of the form $[c_1]\cdot\ldots\cdot[c_m]$, where $c_1,\dots,c_m\colon\Sone\to\mrS$ are simple
+% closed curves; we consider the product map 
+% \[
+% c_1\times\dots\times c_m\colon \pa{\Sone}^{\times m}\to \SP^m\pa{\mrS}
+% \]
+% which carries the fundamental class of the $m-$fold torus to some class in
+% $H_m(\SP^m\pa{\mrS})$; we then lifts this class, in a nice way, to a class
+% in $H_m(\cms)$.
+
+
+The construction of $\psi_m$ is rather long and technical and involves a few definitions.
+\begin{defn}
+ \label{defn:D}
+ Let $\D\subset\mrS$ be the open square $(1/4;3/4)\times(1/2,1)$, using the model $\T(\S)$:
+$\D$ is an open disc in $\mrS$ near $\partial\S$ and disjoint from all $\U_i$'s and $\V_i$'s.
+
+In the following it is useful to redefine $\gg$ as the group of isotopy classes
+of diffeomorphisms of $\S$ that fix both $\partial \S$ and $\D$ pointwise: this is 
+not a problem, since the inclusion
+\[
+\Diff(\S;\D\cup\partial\S)\subset \Diff(\S;\partial\S)
+\]
+induces a bijection on the set of path-components.
+\end{defn}
+
+\begin{defn}
+\label{defn:cCm}
+Let $\cC^m$ be the the (discrete) set of isotopy classes of $m-$tuples of simple closed curves $c_1,\dots,c_m\subset\mrS$
+such that:
+\begin{itemize}
+%  \item each $c_r\colon\Sone\to\mrS$ is smooth and transverse to each $\U_i$ and $\V_i$;
+ \item the curves $\set{c_i}_{i\leq m}$ intersect each other only inside $\D$;
+ \item each curve $c_i$ is transverse to $\partial\D$.
+\end{itemize}
+Two such $m-$tuples are isotopic if there is an ambient isotopy of $\S$ relative to $\partial\S\cup\D$
+transforming one $m-$tuple into the other. In particular $\cC^m$ is more than countable.
+% For each isotopy class we
+% suppose to have fixed a representative $(c_1,\dots,c_m)$ made of curves that are
+% also transverse to all $\U_i$'s and $\V_i$'s. We write
+% $[c_1,\dots,c_m]$ for the isotopy class whose preferred representative is
+% $(c_1,\dots,c_m)$.
+
+We denote by $\ZcC{m}$ the free $\Z_2-$vector space with basis $\cC^m$.
+There is a canonical surjective map $\pr_m\colon\ZcC{m}\to\Sym_m(\H)$ given by
+\[
+ \pr_m([c_1,\dots,c_m])=[c_1]\cdot\ldots\cdot[c_m],
+\]
+where $[c_i]\in\H$ is the fundamental class of the curve $c_i$.
+
+The group $\gg$ acts both on $\ZcC{m}$, by acting on its basis $\cC^m$, and
+on $\Sym_m(\H)$, symplectically. The map $\pr_m$ is $\gg-$equivariant.
+\end{defn}
+% Our aim is to define a $\gg-$equivariant map $\tpsi\colon\ZcC{m}\to H_m(\cms)$ and show that it
+% factors through $\pr$ to give the desired $\gg-$equivariant map $\psi$; we will then show that
+% $\psi$ is an isomorphism.
+
+% The map $\tpsi_m$ that we construct will have two additional properties. The first
+% is the following: for any
+% $(c_1,\dots,c_m)$ representing a class in $\cC^m$, the homology
+% class $\tpsi_m(c_1,\dots,c_m)$ can be represented by a singular cycle in $\cms$ which
+% is \emph{supported} on the union $\D\cup c_1\cup \dots\cup c_m$, meaning that
+% this singular cycle only hits configurations in $\cms$ whose points actually
+% lie in $\D\cup c_1\cup \dots\cup c_m$.
+% 
+% For the second property we need a definition
+\begin{defn}
+ \label{defn:cmsD}
+ The space $\cmsD$ is the subspace of $\SP^{m}\pa{\mrS}$ of configurations where all points
+ having multiplicity $\geq 2$ lie inside $D$. The space $\cmsD$ is an open subset
+ of $\SP^m\pa{\mrS}$, which is a $2m-$dimensional manifold, hence $\cmsD$ is also a manifold.
+ 
+ There is a natural inclusion $\iota_m\colon\cms\subset\cmsD$ and there is a natural map
+  $\j_m\colon \ZcC{m}\to H_m(\cmsD)$ defined as follows: for a class in $\cC^m$ represented
+  by a $m-$tuple $(c_1,\dots,c_m)$, the composition
+  \[
+   \begin{CD}
+    \pa{\Sone}^{\times m} @>c_1\times\dots\times c_m >> \pa{\mrS}^{\times m} @>>> \SP^m\pa{\mrS}
+   \end{CD}
+  \]
+has image in the subspace $\cmsD$; we define $\j_m(c_1,\dots,c_m)$ as the image
+of the fundamental class
+of the $m-$fold torus in $H_m(\cmsD)$. The result doesn't change
+if we substitute $(c_1,\dots,c_m)$ with another $m-$tuple which is isotopic relative
+to $\D\cup \partial\S$.
+
+We call $[c_1]\cdot\ldots\cdot[c_m]$ the image in $\cmsD$ of the fundamental cycle of the
+$m-$fold torus: this cycle represents the class $\j_m(c_1,\dots,c_m)$ and it is \emph{supported}
+on the union $c_1\cup\dots\cup c_m$, meaning that it hits configurations in $\cmsD$ of points of $\mrS$
+lying in this union.
+
+The group $\Diff(\S,\D\cup\partial\S)$ acts on $\cmsD$, and there is an induced action of $\gg$
+on $H_m(\cmsD)$. The map $\j_m$ is $\gg-$equivariant.
+\end{defn}
+
+\begin{lem}
+ \label{lem:cms->cmsDinj}
+ The inclusion $\iota_m\colon\cms\to\cmsD$ induces an injective map
+ \[
+  \pa{\iota_m}_*\colon H_m(\cms)\to H_m(\cmsD).
+ \]
+\end{lem}
+\begin{proof}
+ It is equivalent to prove that the map $\iota_m^*\colon H^m(\cmsD)\to H^m(\cms)$ is surjective,
+ or, using Poincaré-Lefschetz duality, that the map $H_m(\cmsD^c)\to H_m(\cms^c)$
+ is surjective: this last map is induced by the map $\cmsD^c\to\cms^c$ collapsing the subspace
+ $\cmsD^c\setminus\cms$ to $\infty$.
+ 
+ Recall from lemma \ref{lem:gensymchain} that a $\Z_2-$basis for $H_m(\cms^c)$
+ is given by classes $[p,(\alpha_j),(u_i,v_i)]$ with $p=0$, $\alpha_j=0$ for all $j$,
+ and $\sum_{i=1}^g (u_i+v_i)=m$. Here and in the following we abbreviate $[0,(u_i,v_i)]$.
+ 
+ The class $[0,(u_i,v_i)]$ is represented by a generalised symmetric chain consisting of only one cell,
+ the cell $e^{\tup}$
+ with $\tup=(0,(u_i,v_i))$.
+ 
+ In particular there is a map of pairs
+ $\phi^{\tup}\colon(\Delta^{\tup},\partial\Delta^{\tup})\to (\cms^c,\infty)$, and $[0,(u_i,v_i)]$
+ is the image along this map of the fundamental class of $H_m\pa{\Delta^{\tup},\partial\Delta^{\tup}}$.
+ 
+ It is straightforward to check that the map $\phi^{\tup}$ factors through
+ $(\cmsD,\infty)$, as a map of pairs; surjectivity of $H_m(\cmsD^c)\to H_m(\cms^c)$ follows.
+\end{proof}
+
+We have the following diagram of $\gg$-equivariant maps, where the full arrows are those
+that we have already constructed, and we still have to prove the existence of the dashed arrows
+\begin{equation}
+\label{eq:fulldasheddiagram}
+\begin{tikzcd}[column sep=8em,row sep=5em]
+  \ZcC{m} \ar[r,"\pr_m",two heads]\ar[d,dashed, swap, "\tpsi_m"]\ar[dr,"\j_m",near start]
+  & \Sym_m(\H)\ar[d,dashed ]\ar[dl,dashed,very near start,"\psi_m"]\\
+  H_m(\cms)\ar[r,swap,"\pa{\iota_m}*"hook] & H_m(\cmsD)
+ \end{tikzcd}
+\end{equation}
+
+We now prove that the map $\j_m$ lifts along $(\iota_m)_*$
+to a $\gg-$equivariant map $\tpsi_m$ as in the diagram.
+Since $(\iota_m)_*$ is injective by lemma \ref{lem:cms->cmsDinj}, it suffices to prove that $\j_m$
+lands in the image of $(\iota_m)_*$, and the last statement doesn't depend on how $\gg$ acts on these groups.
+
+We will prove by induction on $m$ the following technical lemma:
+
+\begin{lem}
+ \label{lem:tpsiwithproperties}
+For each $m-$tuple of curves $(c_1,\dots,c_m)$ representing a class in $\cC^m$
+and for each open neighborhood $\N\subset\mrS$ of
+$\D\cup c_1\cup\dots\cup c_m$, there is a singular cycle $\fc=\tpsi_m(c_1,\dots,c_m)$
+in $\cms$ with the following properties:
+\begin{itemize}
+ \item the cycle $\fc$ is \emph{supported} on $\N$, i.e.,
+this singular cycle only hits configurations of $m$ distinct points of $\mrS$ that actually lie in $\N$;
+\item $\pa{\iota_m}_*(\fc)$ represents the homology class $\j_m(c_1,\dots,c_m)\in H_m\pa{\cmsD}$;
+\item the two cycles $\pa{\iota_m}_*(\fc)$ and $[c_1]\cdot\ldots\cdot[c_m]$
+are connected by a homology in $\cmsD$ which is supported on $\N$ (the word
+\emph{homology} denotes here a $(m+1)-$singular chain whose boundary is the difference between the two cycles).
+\end{itemize}
+\end{lem}
+
+For $m=0$ both $\ZcC{0}$ and $H_0(C_0(\S))$ are
+isomorphic to $\Z_2$ and there is nothing to show; for $m=1$
+we have a canonical identification $H_1(C_1(\S))\simeq\H\simeq\Sym_1(\H)$, so we take $\tpsi_1=\pr_1$;
+obviously for all $c_1$ representing a class in $\cC^1$, the homology class $\pr_1(c_1)\in\H$
+is represented by a cycle supported on $c_1$,
+and in this case the cycles $\iota_*\pa{\tpsi(c_1)}$ and $\pr_1(c_1)=\j_m(c_1)$ coincide.
+
+Let now $m\geq 1$ and in the following fix a class $(c_1,\dots, c_{m+1})\in\cC^m$.
+% and suppose that we have proved the existence of the lift $\tpsi_m\colon \ZcC{m}\to H_m(\cms)$
+% with the aforementioned property.
+
+\begin{defn}
+\label{defn:variationsCm}
+We introduce a few variations of the notion of configuration space.
+\begin{itemize} 
+ \item The space $C_{1,m}(\S)$ is the subspace of $\mrS\times \cms$ containing all configurations
+ $\pa{\bar P;\set{P_1,\dots,P_m}}$ with $\bar P\neq P_i$ for all $i$; in other words it is
+ the space of configurations of $m+1$ points, one of which is \emph{red} (meaning that
+ it is distinguishable from the other points), whereas the other are \emph{black} and not distinguishable
+ from each other.
+%  \item The space $\fmsD$ is the subspace of $\mrS\times\cmsD$ containing all configurations
+%  $(q;\set{p_1,\dots,p_m})$ where either $q\in\D$ may coincide with some $p_i$ (which can appear
+%  with multipliciy $\geq 1$), or $q\not\in\D$ must be distinct from all $p_i$'s.
+%  Again $q$ is the red point
+ \item The space $\fmstwoD$ is the subspace of $\mrS\times\cms$ containing all configurations
+ $\pa{\bar P;\set{P_1,\dots, P_m}}$ where either $\bar P\in\D$ may coincide with \emph{exactly}
+ one $P_i$, or
+ $\bar P\not\in \D$ must be distinct from all $P_i$'s.
+ Again $\bar P$ is called the red point.
+ %We see that $C_{1,m}\subset\fmstwoD$ is an open subspace.
+ \item The space $\cmstwoD$ is the subspace of $\SP^{m+1}\pa{\mrS}$ of configurations where either all $m+1$ points
+ are distinct, or there is exactly one point \emph{inside $\D$} with multiplicity $2$ and $m-1$ other points,
+ somewhere in $\S$, with multiplicity $1$.
+\end{itemize}
+ \end{defn}
+ 
+We the following natural inclusions:
+\[
+C_{1,m}(\S)\subset\fmstwoD\subset\fmsD\subset\mrS\times\cmsD\subset\mrS\times\SP^m\pa{\mrS};
+\]
+\[
+C_{m+1}(\S)\subset\cmstwoD\subset C_{m+1}^{\D}(\S)\subset\SP^{m+1}\pa{\mrS}.
+\]
+All these spaces are
+manifolds of dimension $2m+2$ and all inclusions are open.
+
+In particular there is a sequence of maps
+\[
+ H_{m+1}\pa{C_{m+1}(\S)}\to H_{m+1}\pa{\cmstwoD}\to H_{m+1}\pa{C_{m+1}^{\D}(\S)}
+\]
+and we will first lift the homology class $j_{m+1}(c_1,\dots,c_{m+1})$ to $H_m\pa{\cmstwoD}$ and
+then to $H_{m+1}(C_{m+1}(\S))$, each time controlling the support of our representing
+cycles and of the homologies between them.
+
+Fix a small neighborhood $\N$ of $\D\cup c_1\cup\dots\cup c_{m+1}$.
+
+For the first lift, let $\N'=\pa{\N\setminus c_1}\cup\D$, which is an open
+neighborhood of $\D\cup c_2\cup\dots\cup c_{m+1}$ in $\mrS$. By inductive hypothesis
+there is a cycle $\fc=\tpsi_m(c_2,\dots,c_{m+1})$ in $\cms$ which is supported on $\N'$,
+and such that $(\iota_m)_*(\fc)$ is homologous to $[c_2]\cdot\ldots\cdot[c_{m+1}]$
+along a homology in $\cmsD$ supported on $\N'$ as well.
+
+We can multiply both
+cycles and the homology between them by the cycle $[c_1]$: the result are the two homologous cycles
+$[c_1]\cdot \fc$ and $[c_1]\cdot\ldots\cdot[c_{m+1}]$ in $C_{m+1}^{\D}(\S)$: both cycles and the
+homology between them are supported on $\N$. Notice now that the
+cycle $[c_1]\cdot\fc$ lives in $\cmstwoD$, so the first lift is done and we can now
+deal with the second lift.
+
+There is a natural map $\p\colon \fmstwoD\to \cmstwoD$, which converts the red point
+into a black point. This map restricts to %maps $\fmstwoD\to\cmstwoD$ and 
+a map $C_{1,m}(\S)\to C_{m+1}(\S)$;
+% the latter being even a $m+1-$fold covering map;
+we have a commutative diagram
+ \begin{equation}\label{eq:cmstwodiagram}
+  \begin{CD}
+   C_{1,m}(\S) @>\subset >> \fmstwoD %@>\subset >> \fmsD
+\\   @V\p VV @V\p VV %@V\p VV
+\\   C_{m+1}(\S) @>\subset >> \cmstwoD %@>\subset >> C_{m+1}^D(\S)
+   \end{CD}
+\end{equation}
+
+\begin{defn}
+\label{defn:falsediagonals} 
+Let 
+\[
+\Dmone=\cmstwoD\setminus C_{m+1}(\S)
+\]
+and similarly
+\[
+\Donem=\fmstwoD\setminus C_{1,m}(\S).
+\]
+We notice that $\p$ restricts to a homeomorphism $\Donem\to\Dmone$. Moreover both $\Dmone\subset\cmstwoD$
+and $\Donem\subset\fmstwoD$ are properly embedded submanifolds of codimension $2$, and the map $\p$ restricts to
+a $2-$ramified covering between their respective normal bundles.
+\end{defn}
+
+Diagram \ref{eq:cmstwodiagram} induces a commutative diagram in homology
+\begin{equation}
+ \label{eq:fivediagram}
+\minCDarrowwidth15pt
+ \begin{CD}
+  @. H_{m+1}\pa{\fmstwoD} @>>> H_{m+1}\pa{\fmstwoD, C_{1,m}(\S)}\\
+  @. @V\p_*VV @V\p_*VV\\
+  H_{m+1}\pa{ C_{m+1}(\S)} @>>> H_{m+1}\pa{\cmstwoD} @>>> H_{m+1}\pa{\cmstwoD,C_{m+1}(\S)}
+ \end{CD}
+\end{equation}
+
+Recall that we want lift the homology class represented by the cycle $[c_1]\cdot\fc$
+from the bottom central group to the bottom left group.
+
+We first notice that there is a lift $[c_1]\otimes\fc$ to a cycle in $\pa{\fmstwoD}$,
+which is defined by declaring the point in $[c_1]\cdot\fc$ that spins around $c_1$
+to be red. We then notice that the right vertical map
+\[
+\p_*\colon H_{m+1}\pa{\fmstwoD, C_{1,m}(\S)} \to H_{m+1}\pa{\cmstwoD,C_{m+1}(\S)};
+\]
+can be rewritten, after using excision to a tubular neighborhood of $\Donem$ and $\Dmone$ and
+the Thom isomorphism, as a map
+\[
+ H_{m-1}(\Donem)\to H_{m-1}(\Dmone);
+\]
+the latter map is multiplication by $2$, after identifying $\Dmone$ and $\Donem$ along $p$:
+indeed the normal bundle of $\Donem$ is a
+double covering of the normal bundle of $\Dmone$, hence the Thom class of the first disc
+bundle corresponds to twice the Thom class of the second disc bundle. We are working
+with coefficients in $\Z_2$, so multiplication by $2$ is the zero map.
+
+Therefore the image of the cycle $[c_1]\otimes \fc$ along the diagonal of the square
+in diagram \ref{eq:fivediagram} is zero; hence the image of $[c_1]\cdot\fc$ in $H_{m+1}\pa{\cmstwoD,C_{m+1}(\S)}$
+is zero, hence the homology class of $[c_1]\cdot\fc$ comes from $H_{m+1}(C_{m+1}(\S))$: more
+precisely there exists a cycle $\fc'$ in $C_{m+1}(\S)$ such that $\pa{\iota_{m+1}}_*(\fc')$ is homologous
+to $[c_1]\cdot\fc$.
+
+To prove lemma \ref{lem:tpsiwithproperties} we need to find a good cycle and
+a good homology, namely two that are supported on $\N$: a priori both $\fc'$ and the homology
+between $\pa{\iota_{m+1}}_*(\fc')$ and $[c_1]\cdot\fc$ are only supported on $\mrS$.
+
+But this is easily done by considering, in the whole argument of the proof, the surface $\N$ instead of $\mrS$:
+we can define configuration spaces as in definition \ref{defn:variationsCm} using the open surface
+$\N$ instead of $\mrS$, and repeat the whole argument considering this as the \emph{ambient surface}:
+indeed we only need $\N$ to contain $\D$ and all curves $c_1,\dots,c_{m+1}$.
+
+Here it is crucial that the action of $\gg$ is not involved in the statement of lemma
+\ref{lem:tpsiwithproperties}, as $\N\subset\S$ is not preserved, even up to isotopy,
+by diffeomorphisms of $\S$.
+
+Lemma \ref{lem:tpsiwithproperties} is proved.
+
+We now have to prove the following lemma to conclude the proof of theorem \ref{thm:Hbms*as*ggrep}
+in bidigrees $(m,m)$.
+\begin{lem}
+ \label{lem:tpsi->psi}
+The map $\tpsi_m\colon\ZcC{m}\to H_m(\cms)$ is surjective and factors through the map $\pr_m$.
+\end{lem}
+\begin{proof}
+The factorisation is equivalent to the inclusion $\ker\pr_m\subseteq\ker\tpsi_m$: since both
+$\pr_m$ and $\tpsi_m$
+are $\gg-$equivariant, also the induced map $\Sym_m(\H)\to H_m(\cms)$ will automatically be
+$\gg-$equivariant.
+
+Recall from the proof of lemma \ref{lem:cms->cmsDinj} that a basis for $H_m(\cms^c)\simeq H^m(\cms)$, which is
+the dual of $H_m(\cms)$, is given by the classes $[0,(u_i,v_i)]$, represented by generalised
+symmetric chains consisting of only one cell $e^{\tup}$, with $\tup=(0,(u_i,v_i))$.
+The corresponding linear functionals are the algebraic intersection products
+coming from Poincaré-Lefschetz duality:
+\[
+ (\cdot\cap e^{\tup})\colon H_m(\cms)\to\Z_2.
+\]
+Therefore
+\[
+ \ker\tpsi_m=\bigcap_{\tup}\ker\pa{(\cdot\cap e^{\tup})\circ\tpsi_m},
+\]
+and it suffices to check that $\ker\pr_m\subseteq\ker\pa{(\cdot\cap e^{\tup})\circ\tpsi_m}$
+for all $\tup$ of the form $(0,(u_i,v_i))$, or equivalently, that $(\cdot\cap e^{\tup})\circ\tpsi_m$ factors through $\pr_m$.
+
+Recall from the proof of lemma \ref{lem:cms->cmsDinj} that the cohomology class $(\cdot\cap e^{\tup})$ is a pullback
+of a cohomology class of $\cmsD$, that by abuse of notation we still call $(\cdot\cap e^{\tup})$:
+then we can compute the map $(\cdot\cap e^{\tup})\circ\tpsi_m$ as the map $(\cdot\cap e^{\tup})\circ\j_m$.
+
+Looking at the geometric intersection between the cycle $[c_1]\cdot\dots[c_m]$ in
+$\cmsD$, and the cycle $e^{\tup}$ in $\cmsD^c$, we see that the map
+\[
+(\cdot\cap e^{\tup})\circ\j_m\colon \ZcC{m}\to\Z_2
+\]
+coincides with the composition
+\[
+\pa{ \prod_{i=1}^g(\cdot\cap\U_i)^{u_i}(\cdot\cap\V_i)^{v_i}}\circ\pr_m,
+\]
+where $\prod_{i=1}^g(\cdot\cap\U_i)^{u_i}(\cdot\cap\V_i)^{v_i}\in\Sym_m(\Hom(\H;\Z_2))=\Hom\pa{\Sym_m(\H);\Z_2}$;
+in particular it factors through $\pr_m$.
+
+To show surjectivity of $\tpsi_m$, choose a tuple $\tup$ of the form $(0,(u_i,v_i))$
+and an $m-$tuple of curves $(c_1,\dots,c_m)$ containing, for every $1\leq i\leq g$, $u_i$ parallel
+copies of some curve representing $\u_i$ and $v_i$ parallel copies of some curve representing
+$\v_i$ (see definition \ref{defn:dualHbasis}), such that all intersections between these curves
+lie in $\D$.
+
+Then $j_m(c_1,\dots,c_m)\cap e^{\tup}=1$ and for all
+other tuples $\tup'=(0,(u'_i,v'_i))$ we have instead $j_m(c_1,\dots,c_m)\cap e^{\tup'}=0$.
+
+This shows that $\psi_m(c_1,\dots,c_m)$ must be $[c_1]\cdot\ldots\cdot[c_m]\in\Sym_m(\H)$, which is
+one of the generating monomials.
+\end{proof}
+
+Theorem \ref{thm:Hbms*as*ggrep} is then proved in all bidegrees $(*,m)$ with $*=m$.
+
+\subsection{General bidegrees $(m-l,m)$.} In this subsection we fix a bidegree $(m-l,m)$
+with $0\leq l\leq m$.
+Our aim is to prove theorem \ref{thm:Hbms*as*ggrep} for this bidegree $(m-l,m)$.
+\begin{defn}
+%  Let $\tilde\D'$ be the open trapeziod contained in $(0,1)^2\subset\mrS$ which is delimited
+%  by the four points $(1/8;1)$, $(1/4;1/2)$, $(3/4;1/2)$ and $(7/8;1)$ (SEE PICTURE); in particular
+%  $\D\subset\D'$.
+ Let $\S'\subset\S$ be the closure in $\S$ of $\S\setminus\bar\D$, where $\bar\D$ is the closure of $\D$ in $\S$.
+ Notice that $\S'$ is also a surface of type $\sg$.
+ 
+ For all $m$ we define configuration spaces $C_m(\D)$ and $C_m(\S')$ as in definition \ref{defn:cms},
+ using $\D$ and $\mrS'$ instead of $\mrS$, respectively.
+ 
+ For every splitting $m=p+(m-p)$ there is an open embedding
+ \[
+ \mu\colon C_p(\D)\times C_{m-p}(\S')\to \cms
+ \]
+ given by taking the union of configurations:
+ \[
+  \mu(\set{P_1,\dots,P_p};\set{P'_1,\dots,P_{m-p}})=\set{P_1,\dots,P_p,P'_1,\dots,P'_{m-p}}\in\cms.
+ \]
+%  For the rest of the section let $\gg$ denote the group of isotopy classes of diffeomorphisms
+%  of $\S$ relative to $\partial\S\cup\D'$: in symbols $\gg=\pi_0\pa{\Diff(\S;\partial\S\cup\D'}$.
+\end{defn}
+For all $0\leq p\leq m$, the group $\Diff(\S;\partial\S\cup\D)$ acts both on $C_p(\D)\times C_{m-p}(\S')$
+and on $\cms$, and the map $\mu$ is equivariant with respect to this action;
+hence, using the K\"{u}nneth formula, there is an induced $\gg-$equivariant map in homology
+\begin{equation}
+ \label{eq:mu*}
+ \mu_*\colon H_{p-l}\pa{C_p(\D)}\otimes H_{m-p}\pa{C_{m-p}(\S')}\to H_{m-l}\pa{\cms}.
+\end{equation}
+
+Notice that $H_{p-l}\pa{C_p(\D)}\otimes H_{m-p}\pa{C_{m-p}(\S')}$
+is the tensor product of the trivial representation $H_{p-l}\pa{C_p(\D)}$, and
+of the $\gg-$representation $H_{m-p}\pa{C_{m-p}(\S')}$, which by the results of the previous
+section is isomorphic to the symplectic representation $\Sym_{m-p}(\H)$.
+
+We will prove the following lemma, from which theorem \ref{thm:Hbms*as*ggrep} easily follows:
+\begin{lem}
+ \label{lem:oplussplitting}
+For all $l\leq p\leq m$ the map $\mu_*$ in equation \ref{eq:mu*} is injective, and the collection
+of all these maps yields a splitting
+\[
+ H_{m-l}(\cms)=\bigoplus_{p=l}^m H_{p-l}\pa{C_p(\D)}\otimes H_{m-p}\pa{C_{m-p}(\S')}
+\]
+\end{lem}
+\begin{proof}
+Notice that the statement of the lemma doesn't depend on the the action of $\gg$:
+we have a map between two $\Z_2-$vector spaces, we already know that it is $\gg-$equivariant,
+we only need to show that it is a bijection.
+% 
+% We can equivalently consider the maps in cohomology
+%  \[
+%    \mu^*\colon  H^{m-l}\pa{\cms}\to H^p\pa{C_{m-p}(\S')}\otimes H^{p-l}\pa{C_p(\D)},
+%  \]
+% and show that they are surjective for $0\leq p\leq m-l$ and together exhibit a product splitting
+% \[
+%   H^{m-l}(\cms)=\prod_{p=0}^{m-l} H^p\pa{C_{m-p}(\S')}\otimes H^{p-l}\pa{C_p(\D)}.
+% \]
+% Notice that the natural target for the cohomology map $\mu^*$ is the whole group
+% \[
+%  H^{m-l}\pa{C_{m-p}(\S')\times C_p(\D)}\simeq \prod_{q=0}^p H^q\pa{C_{m-p}(\S')}\otimes H^{m-l-q}\pa{C_p(\D)},
+% \]
+% where we have used the K\"unneth formula; we consider here, by abuse of notation,
+% the composition of this map with the projection
+% on the factor corresponding to $q=p$.
+% 
+% Using Poincaré-Lefschetz duality and again the K\"unneth formula we reduce to show that the maps
+% \[
+% \mu^c_* \colon \tH_{m-l}(\cms^c)\to \tH_p\pa{C_{m-p}(\S')^c}\otimes \tH_{p-l}\pa{C_p(\D)^c}
+% \]
+% are surjective and exhibit $\tH_{m-l}(\cms^c)$ as a product
+% \[
+% \tH_{m-l}(\cms^c)=\prod_{p=0}^{m-l}\tH_p\pa{C_{m-p}(\S')^c}\otimes \tH_{p-l}\pa{C_p(\D)^c}.
+% \]
+% Here a few explanations are required:
+% we are considering the map $\mu^c\colon \cms^c\to \pa{C_{m-p}(\S')\times C_p(\D)}^c$ which collapses the complement
+% of the open subspace $C_{m-p}(\S')\times C_p(\D)\subset\cms$ to the point at infinity; it induces a map
+% $\mu^c_*\colon \tH_{m-l}(\cms^c) \to \tH_{m-l}\pa{\pa{C_{m-p}(\S')\times C_p(\D)}^c}$;
+% applying Poincaré-Lefschetz duality
+% and the K\"unneth formula to the second group we get an isomorphism
+% \[
+%  \tH_{m-l}\pa{\pa{C_{m-p}(\S')\times C_p(\D)}^c}\simeq \prod_{q=0}^p \tH_q\pa{C_{m-p}(\S')}\otimes\tH_{m-l-q}\pa{C_p(\D)};
+% \]
+% we are considering the composition of the map $\mu^c_*$ with the projection onto the factor $q=p$, and by
+% abuse of notation we call this map simply $\mu^c_*$.
+% 
+
+Fix $l\leq p\leq m$ and let $[a]=\prod_{j=0}^{\infty}(Q^j\epsilon)^{\alpha_j}$ be a generator of
+$H_{p-l}(C_p(\D))$, i.e., $\sum_j\alpha_j=l$ and $\sum_j2^j\alpha_j=p$; let also
+$\beta=\prod_{i=1}^g \u_i^{u_i}\v_i^{v_i}$ be a generator of $H_{m-p}(C_{m-p}(\S'))$, using the
+isomorphism proved in the previous subsection, i.e., $\sum_i(u_i+v_i)=m-p$. Here $a$ and
+$b$ are chosen singular cycles representing the homology classes, with $a$ supported on $\D$
+and $b$ supported on $\S'$.
+
+Then $a\otimes b$ represents a generator of $H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))$,
+and we are interested in the homology class represented by $\mu_*(a\otimes b)$.
+We will study
+the intersection of $\mu_*([a]\otimes [b])$ with cohomology classes of $\cms$ represented by
+generalised symmetric chains in $\cms^c$.
+
+% $[a]\otimes [b]$ has a dual class in $\tH_{p-l}(C_p(\D)^c)\otimes \tH_p(C_{m-p}(\S')^c)$
+% represented by the product of generalised symmetric chains
+% \[
+%  (\alpha_j)_j\otimes (p,(u_i,v_i)_{i\leq g}).
+% \]
+% If $\tup=(l,(x_i)_{i\leq l})$ is a tuple such that $e^{\tup}$ appears in the symmetric
+% chain $(\alpha_j)_j$, and if $\tup'=(0,(u_i,v_i)_{i\leq g})$ is the only tuple such that
+% $e^{\tup'}$ appears in the generalised symmetric chain $(p,(u_i,v_i)_{i\leq g})$, then
+% the product $e^{\tup}\times e^{\tup'}\subset C_p(\D)\times C_{m-p}(\S')\subset\cms$ is
+% contained in the closure of the generalised symmetric chain $e^{\tup}$, where...
+
+
+
+% If $p<p'$ then
+% the \emph{geometric} intersection between the cycle $|p',(\alpha'_j),(u'_i,v'_i)|$
+% in $\cms^c$ and the cycle $\mu_*(a\otimes b)$ in $\cms$ is empty: indeed the first cycle is supported
+% on $\infty\in\cms^c$ and on configurations where at least $p'$ points lie in the union
+% $\bigcup_i(\U_i\cup\V_i)\subset\S'$,
+% whereas the second cycle is supported on configurations where at least $m-p$ points lie
+% inside $\D$. The algebraic intersection between the homology classes $\mu_*([a]\otimes [b])$
+% and $[p',(\alpha'_j),(u'_i,v'_i)]$ is therefore also zero.
+% 
+% Consider now the case $p=p'$.
+
+To compute the algebraic intersection
+between $\mu_*(a\otimes b)$ and $[p',(\alpha'_j),(u'_i,v'_i)]$ we
+consider the map
+\[
+ \mu^c\colon \cms^c\to \pa{C_p(\D)\times C_{m-p}(\S')}^c
+\]
+which collapses to $\infty$ the complement in $\cms^c$ of $C_p(\D)\times C_{m-p}(\S')$.
+
+By Poincaré-Lefschetz duality the map $\mu^c_*$ in reduced homology corresponds to the cohomology map
+\[
+ \mu^*\colon H^*(\cms)\to H^*(C_p(\D)\times C_{m-p}(\S'))=H^*(C_p(\D))\otimes H^*(C_{m-p}(\S')).
+\]
+
+We give $\pa{C_p(\D)\times C_{m-p}(\S')}^c$ the cell structure of the smash product
+$C_p(\D)^c\wedge C_{m-p}(\S')^c$. Here $C_p(\D)^c$ is given the cell structure of $C_p((0,1)^2)$
+along the natural identification $\D=(1/4,3/4)\times(1/2,1)\cong(0,1)^2$ obtained by rescaling
+and translating; moreover we choose any diffeomorphism $\mrS'\cong\mrS$ that restricts to the identity
+on all $\U_i$'s and $\V_i$'s, and give $C_{m-p}(\S')^c$ the cell structure of $C_{m-p}(\S)^c$.
+
+Recall that $\cms^c$ can be filtered according to the norm of cells: a cell $e^{\tup}$ with
+$\tup=(l,(x_i),(u_i,v_i))$ has norm $\sum x_i$. In the previous section we just considered
+the associated filtration of the reduced chain complex $\tCh_*(\cms^c)$, but now we need
+to consider the closed subcomplex $F_p\cms^c\subset\cms^c$ consisting of all cells of norm $\leq p$.
+
+The crucial remark is that $\mu^c$ restricts to a cellular map 
+\[
+F_p\cms^c\to \pa{C_p(\D)\times C_{m-p}(\S')}^c.
+\]
+Consider an open cell
+cell $e^{\tup}$ for some tuple $\tup=(l, (x_i),(u'_i,v'_i))$ of norm $p'\leq p$:
+its intersection with the subspace
+$C_p(\D)\times C_{m-p}(\S')$ is empty if $p'<p$, and it is exactly the open product of cells
+$e^{\tup'}\times e^{\tup''}$,
+where $\tup'=(l,(x_i))$ and $\tup''=(0,(u'_i,v'_i))$, if $p'=p$; therefore
+$\mu^c(e^{\tup})$ is $\set{\infty}$ in the first case, and in the second case it
+is contained in the union $\set{\infty}\cup e^{\tup'}\times e^{\tup''}$, which is also
+contained in the $p'-$skeleton of $\pa{C_p(\D)\times C_{m-p}(\S')}^c$.
+
+We replace the map $\mu^c$ by a cellular approximation that agrees with it on the $p-$skeleton,
+and by abuse of notation we still call $\mu^c$ the new map.
+
+Consider now any generalised symmetric chain $|p',(\alpha'_j),(u'_i,v'_i)|$ representing
+a class in $H_{m+l}(\cms^c)=H^{m-l}(\cms)$, hence $\sum_j\alpha'_j=l$, and suppose $p'\leq p$.
+
+If $p'<p$, the previous argument shows that $\mu^c_*\pa{|p',(\alpha'_j),(u'_i,v'_i)|}=\infty$,
+and in particular the corresponding homology class is mapped to zero.
+
+Suppose now $p'=p$: then the homology class $[p,(\alpha'_j),(u'_i,v'_i)]\in \tH_{m+l}(\cms^c)$
+is mapped along $\mu^c_*$ to the class
+$[l,(\alpha'_j)]\otimes [0,(u'_i,v'_i)]\in\tH\pa{C_p(\D)^c\wedge C_{m-p}(\S')^c}$
+Indeed the previous
+argument shows that each cell appearing in the cycle $|p,(\alpha'_j),(u'_i,v'_i)|$ covers with degree
+1 a corresponding cell of the cycle $|l,(\alpha'_j)|\otimes |0,(u'_i,v'_i)|$, and no other cell
+of the same dimension: hence at the level of chains we have 
+\[
+\mu^c_*\pa{|p,(\alpha'_j),(u'_i,v'_i)|}=|l,(\alpha'_j)|\otimes |0,(u'_i,v'_i)|.
+\]
+
+We can now compute the algebraic intersection of $\mu_*([a]\otimes [b])$ with
+any cohomology class $[p',(\alpha'_j),(u'_i,v'_i)]$ as the intersection between
+$[a]\otimes [b]$ and $\mu^c_*[p',(\alpha'_j),(u'_i,v'_i)]$.
+
+For $p'<p$ the previous argument show that this intersection is zero.
+
+For $p'=p$ we see that the intersection between the homology classes
+$a\otimes b$ and $\mu^c_*([p,(\alpha'_j),(u'_i,v'_i)])=[l,(\alpha'_j)]\otimes [0,(u'_i,v'_i)]$
+is $1\in\Z_2$ exactly when $u_i=u'_i$ and $v_i=v'_i$ for all $i$, and $\alpha_j=\alpha'_j$
+for all $j$; otherwise it is $0$.
+
+We consider the collection of all strings of the form $(p,(u_i,v_i)_{i\leq g},(\alpha_j)_j)$
+satisfying $\sum\alpha_j=l$ and $\sum \alpha_j2^j=p$; we order these strings lexicographically,
+so that in particular $p$ is weakly increasing; we associate
+to each string its corresponding class in $H_{m-l}(\cms)$ of the form $\mu_*(a\otimes b)$ and its
+corresponding class in $\tH_{m+l}(\cms)$ represented by the corresponding generalised symmetric chain.
+
+Then the matrix of algebraic intersections is an upper-triangular matrix
+with $1$'s on the diagonal, and in particular
+it is invertible. This shows that the set of classes $\mu_*(a\otimes b)$
+is a basis for $H_{m-l}(\cms)$.
+
+% 
+% 
+% 
+% , and let $e^{\tup}$
+% be one of the cells appearing in this generalised symmetric chain, with
+% $\tup=(l,(x_i)_{i\leq l}, (u_i,v_i)_{i\leq g})$, and consider the restriction
+% of $\mu^c\colon\cms^c\to \pa{C_{m-p}(\S')\times C_p(\D)}^c$
+% to $e^{\tup}\subset\cms^c$
+% 
+% If $p\neq p'$, the whole cell $e^{\tup}$ is mapped
+% to $\infty$: indeed if $p<p'$, then a configuration in $e^{\tup}$ contains
+% at least $p'$ points inside $\S'$, so it can't lie in $C_p(\D)\times C_{m-p}(\S')$;
+% if $p'<p$ then a configuration in $e^{\tup}$ contains at least $m-p$ points 
+% 
+% 
+% then the algebraic
+% intersection between $(p',(u'_i,v'_i),(\alpha'_j))$ and $\mu_*(a\otimes b)$ is $0\in\Z_2$,
+% unless $p=p'$, $\alpha_j=\alpha'_j$ for all $j$, and $u_i=u'_i$ and $v_i=v'_i$ for all $1\leq i\leq g$.
+% 
+% Indeed the generalised symmetric chain $(p',(u'_i,v'_i),(\alpha'_j))$ hits only configurations
+% in $\cms$ where for all $1\leq i\leq g$ at least $u'_i$ points lie on $\U_i$ and at least $v'_i$
+% points lie on $\V_i$
+\end{proof}
+
+One could expect that the basis given by all elements $[a]\otimes [b]\in H_{m-l}(\cms)$
+is dual to the basis of classes $[p',(\alpha'_j),(u'_i,v'_i)]\in \tH_{m+l}(\cms^c)$, i.e., the
+matrix considered in the end of the previous proof is not only upper-triangular but also
+diagonal. This is however not true, as the following example shows...
