@@ -29,19 +29,6 @@ is $m$ it must lie in $\Sym_m(\H)$.
 
 
 The construction of $\psi_m$ is rather long and technical and involves a few definitions.
-\begin{defn}
- \label{defn:D}
- Let $\D\subset\mrS$ be the open square $(1/4;3/4)\times(1/2,1)$, using the model $\T(\S)$:
-$\D$ is an open disc in $\mrS$ near $\partial\S$ and disjoint from all $\U_i$'s and $\V_i$'s.
-
-In the following it is useful to redefine $\gg$ as the group of isotopy classes
-of diffeomorphisms of $\S$ that fix both $\partial \S$ and $\D$ pointwise: this is 
-not a problem, since the inclusion
-\[
-\Diff(\S;\D\cup\partial\S)\subset \Diff(\S;\partial\S)
-\]
-induces a bijection on the set of path-components.
-\end{defn}
 
 \begin{defn}
 \label{defn:cCm}
@@ -148,7 +135,7 @@ that we have already constructed, and we still have to prove the existence of th
 \begin{tikzcd}[column sep=8em,row sep=5em]
   \ZcC{m} \ar[r,"\pr_m",two heads]\ar[d,dashed, swap, "\tpsi_m"]\ar[dr,"\j_m",near start]
   & \Sym_m(\H)\ar[d,dashed ]\ar[dl,dashed,very near start,"\psi_m"]\\
-  H_m(\cms)\ar[r,swap,"\pa{\iota_m}*"hook] & H_m(\cmsD)
+  H_m(\cms)\ar[r,swap,"\pa{\iota_m}*"hook] & H_m\pa{\cmsD}
  \end{tikzcd}
 \end{equation}
 
@@ -380,34 +367,41 @@ This shows that $\psi_m(c_1,\dots,c_m)$ must be $[c_1]\cdot\ldots\cdot[c_m]\in\S
 one of the generating monomials.
 \end{proof}
 
-Theorem \ref{thm:Hbms*as*ggrep} is then proved in all bidegrees $(*,m)$ with $*=m$.
+Theorem \ref{thm:Hbms*as*ggrep} is then proved in all bidegrees of the form $(m,m)$.
 
 \subsection{General bidegrees $(m-l,m)$.} In this subsection we fix a bidegree $(m-l,m)$
 with $0\leq l\leq m$.
-Our aim is to prove theorem \ref{thm:Hbms*as*ggrep} for this bidegree $(m-l,m)$.
-\begin{defn}
-%  Let $\tilde\D'$ be the open trapeziod contained in $(0,1)^2\subset\mrS$ which is delimited
-%  by the four points $(1/8;1)$, $(1/4;1/2)$, $(3/4;1/2)$ and $(7/8;1)$ (SEE PICTURE); in particular
-%  $\D\subset\D'$.
- Let $\S'\subset\S$ be the closure in $\S$ of $\S\setminus\bar\D$, where $\bar\D$ is the closure of $\D$ in $\S$.
- Notice that $\S'$ is also a surface of type $\sg$.
- 
- For all $m$ we define configuration spaces $C_m(\D)$ and $C_m(\S')$ as in definition \ref{defn:cms},
- using $\D$ and $\mrS'$ instead of $\mrS$, respectively.
- 
- For every splitting $m=p+(m-p)$ there is an open embedding
- \[
- \mu\colon C_p(\D)\times C_{m-p}(\S')\to \cms
- \]
- given by taking the union of configurations:
- \[
-  \mu(\set{P_1,\dots,P_p};\set{P'_1,\dots,P_{m-p}})=\set{P_1,\dots,P_p,P'_1,\dots,P'_{m-p}}\in\cms.
- \]
-%  For the rest of the section let $\gg$ denote the group of isotopy classes of diffeomorphisms
-%  of $\S$ relative to $\partial\S\cup\D'$: in symbols $\gg=\pi_0\pa{\Diff(\S;\partial\S\cup\D'}$.
-\end{defn}
+Our aim is to prove theorem \ref{thm:Hbms*as*ggrep} for this bidegree.
+
+
+% \begin{defn}
+% %  Let $\tilde\D'$ be the open trapeziod contained in $(0,1)^2\subset\mrS$ which is delimited
+% %  by the four points $(1/8;1)$, $(1/4;1/2)$, $(3/4;1/2)$ and $(7/8;1)$ (SEE PICTURE); in particular
+% %  $\D\subset\D'$.
+% %  Let $\S'\subset\S$ be the closure in $\S$ of $\S\setminus\bar\D$, where $\bar\D$ is the closure of $\D$ in $\S$.
+% %  Notice that $\S'$ is also a surface of type $\sg$.
+% %  
+%  Recall from section \ref{Preliminaries} that $\S'$ is the closure in $\S$ of
+%  $\S\setminus\bar\D$, where $\bar\D$ is the closure of $\D$ in $\S$.
+%  
+%  For all $m$ we define configuration spaces $C_m(\D)$ and $C_m(\S')$ as in definition \ref{defn:cms},
+%  using $\D$ and $\mrS'$ instead of $\mrS$, respectively.
+%  
+%  For every splitting $m=p+(m-p)$ there is an open embedding
+%  \[
+%  \mu\colon C_p(\D)\times C_{m-p}(\S')\to \cms
+%  \]
+%  given by taking the union of configurations:
+% 
+% %  For the rest of the section let $\gg$ denote the group of isotopy classes of diffeomorphisms
+% %  of $\S$ relative to $\partial\S\cup\D'$: in symbols $\gg=\pi_0\pa{\Diff(\S;\partial\S\cup\D'}$.
+% \end{defn}
+Recall from section \ref{Preliminaries} that $\S'$ is the closure in $\S$ of
+$\S\setminus\bar\D$, where $\bar\D$ is the closure of $\D$ in $\S$.
+
 For all $0\leq p\leq m$, the group $\Diff(\S;\partial\S\cup\D)$ acts both on $C_p(\D)\times C_{m-p}(\S')$
-and on $\cms$, and the map $\mu$ is equivariant with respect to this action;
+and on $\cms$, and the map $\mu$ is equivariant with respect to this action
+(see definition \ref{defn:universalSbundle});
 hence, using the K\"{u}nneth formula, there is an induced $\gg-$equivariant map in homology
 \begin{equation}
  \label{eq:mu*}
@@ -419,7 +413,7 @@ is the tensor product of the trivial representation $H_{p-l}\pa{C_p(\D)}$, and
 of the $\gg-$representation $H_{m-p}\pa{C_{m-p}(\S')}$, which by the results of the previous
 section is isomorphic to the symplectic representation $\Sym_{m-p}(\H)$.
 
-We will prove the following lemma, from which theorem \ref{thm:Hbms*as*ggrep} easily follows:
+We will prove the following lemma, from which theorem \ref{thm:Hbms*as*ggrep} follows:
 \begin{lem}
  \label{lem:oplussplitting}
 For all $l\leq p\leq m$ the map $\mu_*$ in equation \ref{eq:mu*} is injective, and the collection
@@ -430,8 +424,9 @@ of all these maps yields a splitting
 \end{lem}
 \begin{proof}
 Notice that the statement of the lemma doesn't depend on the the action of $\gg$:
-we have a map between two $\Z_2-$vector spaces, we already know that it is $\gg-$equivariant,
-we only need to show that it is a bijection.
+we have a map between two vector spaces, we already know that it is $\gg-$equivariant,
+we only need to show that it is a bijection. Notice also that lemma \ref{lem:gensymchain}
+implies that the two vector spaces have the same dimension.
 % 
 % We can equivalently consider the maps in cohomology
 %  \[
@@ -471,14 +466,20 @@ we only need to show that it is a bijection.
 % 
 
 Fix $l\leq p\leq m$ and let $[a]=\prod_{j=0}^{\infty}(Q^j\epsilon)^{\alpha_j}$ be a generator of
-$H_{p-l}(C_p(\D))$, i.e., $\sum_j\alpha_j=l$ and $\sum_j2^j\alpha_j=p$; let also
-$\beta=\prod_{i=1}^g \u_i^{u_i}\v_i^{v_i}$ be a generator of $H_{m-p}(C_{m-p}(\S'))$, using the
-isomorphism proved in the previous subsection, i.e., $\sum_i(u_i+v_i)=m-p$. Here $a$ and
+$H_{p-l}(C_p(\D))$, with $\sum_j\alpha_j=l$ and $\sum_j2^j\alpha_j=p$. Let also
+$[b]=\prod_{i=1}^g \u_i^{u_i}\v_i^{v_i}$ be a generator of $H_{m-p}(C_{m-p}(\S'))$, using the
+isomorphism proved in the previous subsection, with $\sum_i(u_i+v_i)=m-p$. Here $a$ and
 $b$ are chosen singular cycles representing the homology classes, with $a$ supported on $\D$
 and $b$ supported on $\S'$.
 
-Then $a\otimes b$ represents a generator of $H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))$,
-and we are interested in the homology class represented by $\mu_*(a\otimes b)$.
+Then $[a]\otimes [b]$ is a generator of $H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))$,
+and we are interested in the homology class $\mu_*([a]\otimes [b])$: there is one such
+class for any choice of $[a]$ and $[b]$ as above, that is, for any choice of a string of numbers
+$(p,(\alpha_j)_{j\geq 0},(u_i,v_i)_{1\leq i\leq g})$
+such that $\sum_j\alpha_j=l$, $\sum_j\alpha_j2^j=p$ and $\sum_i(u_i+v_i)=m-p$; our aim
+is to show that the collection of all these classes of the form $\mu_*([a]\otimes [b])$
+is a basis for $H_{m-l}(\cms)$.
+
 We will study
 the intersection of $\mu_*([a]\otimes [b])$ with cohomology classes of $\cms$ represented by
 generalised symmetric chains in $\cms^c$.
@@ -508,7 +509,7 @@ generalised symmetric chains in $\cms^c$.
 % Consider now the case $p=p'$.
 
 To compute the algebraic intersection
-between $\mu_*(a\otimes b)$ and $[p',(\alpha'_j),(u'_i,v'_i)]$ we
+between $\mu_*([a]\otimes [b])$ and $[p',(\alpha'_j),(u'_i,v'_i)]$ we
 consider the map
 \[
  \mu^c\colon \cms^c\to \pa{C_p(\D)\times C_{m-p}(\S')}^c
@@ -527,15 +528,17 @@ and translating; moreover we choose any diffeomorphism $\mrS'\cong\mrS$ that res
 on all $\U_i$'s and $\V_i$'s, and give $C_{m-p}(\S')^c$ the cell structure of $C_{m-p}(\S)^c$.
 
 Recall that $\cms^c$ can be filtered according to the norm of cells: a cell $e^{\tup}$ with
-$\tup=(l,(x_i),(u_i,v_i))$ has norm $\sum x_i$. In the previous section we just considered
-the associated filtration of the reduced chain complex $\tCh_*(\cms^c)$, but now we need
-to consider the closed subcomplex $F_p\cms^c\subset\cms^c$ consisting of all cells of norm $\leq p$.
+$\tup=(l,(x_i),(u_i,v_i))$ has norm $\sum x_i$, and the norm is weakly decreasing along boundaries.
+In the previous section we just considered
+the associated filtration of the reduced chain complex $\tCh_*(\cms^c)$, whereas now we
+consider the closed subcomplex $F_p\cms^c\subset\cms^c$ which is the union
+of all cells of norm $\leq p$.
 
 The crucial remark is that $\mu^c$ restricts to a cellular map 
 \[
 F_p\cms^c\to \pa{C_p(\D)\times C_{m-p}(\S')}^c.
 \]
-Consider an open cell
+To see this, consider an open cell
 cell $e^{\tup}$ for some tuple $\tup=(l, (x_i),(u'_i,v'_i))$ of norm $p'\leq p$:
 its intersection with the subspace
 $C_p(\D)\times C_{m-p}(\S')$ is empty if $p'<p$, and it is exactly the open product of cells
@@ -545,9 +548,9 @@ $\mu^c(e^{\tup})$ is $\set{\infty}$ in the first case, and in the second case it
 is contained in the union $\set{\infty}\cup e^{\tup'}\times e^{\tup''}$, which is also
 contained in the $p'-$skeleton of $\pa{C_p(\D)\times C_{m-p}(\S')}^c$.
 
-We replace the map $\mu^c$ by a cellular approximation that agrees with it on the $p-$skeleton,
-and by abuse of notation we still call $\mu^c$ the new map.
-
+% We replace the map $\mu^c$ by a cellular approximation that agrees with it on the $p-$skeleton,
+% and by abuse of notation we still call $\mu^c$ the new map.
+% 
 Consider now any generalised symmetric chain $|p',(\alpha'_j),(u'_i,v'_i)|$ representing
 a class in $H_{m+l}(\cms^c)=H^{m-l}(\cms)$, hence $\sum_j\alpha'_j=l$, and suppose $p'\leq p$.
 
@@ -576,15 +579,17 @@ $a\otimes b$ and $\mu^c_*([p,(\alpha'_j),(u'_i,v'_i)])=[l,(\alpha'_j)]\otimes [0
 is $1\in\Z_2$ exactly when $u_i=u'_i$ and $v_i=v'_i$ for all $i$, and $\alpha_j=\alpha'_j$
 for all $j$; otherwise it is $0$.
 
-We consider the collection of all strings of the form $(p,(u_i,v_i)_{i\leq g},(\alpha_j)_j)$
-satisfying $\sum\alpha_j=l$ and $\sum \alpha_j2^j=p$; we order these strings lexicographically,
+We consider the collection of all strings of the form $(p,(\alpha_j)_{j\geq 0},(u_i,v_i)_{1\leq i\leq g})$
+satisfying $\sum\alpha_j=l$,$\sum \alpha_j2^j=p$ and $\sum_i(u_i+v_i)=m-p$;
+we order these strings lexicographically,
 so that in particular $p$ is weakly increasing; we associate
-to each string its corresponding class in $H_{m-l}(\cms)$ of the form $\mu_*(a\otimes b)$ and its
-corresponding class in $\tH_{m+l}(\cms)$ represented by the corresponding generalised symmetric chain.
+to each string its corresponding class in $H_{m-l}(\cms)$ of the form $\mu_*([a]\otimes [b])$ and its
+corresponding class $[p,(\alpha_j),(u_i,v_i)]\in\tH_{m+l}(\cms^c)$.
 
-Then the matrix of algebraic intersections is an upper-triangular matrix
+Then the matrix of algebraic intersections between these two sets of
+classes is an upper-triangular matrix
 with $1$'s on the diagonal, and in particular
-it is invertible. This shows that the set of classes $\mu_*(a\otimes b)$
+it is invertible. This shows that the set of classes $\mu_*([a]\otimes [b])$
 is a basis for $H_{m-l}(\cms)$.
 
 % 
@@ -614,4 +619,23 @@ is a basis for $H_{m-l}(\cms)$.
 One could expect that the basis given by all elements $[a]\otimes [b]\in H_{m-l}(\cms)$
 is dual to the basis of classes $[p',(\alpha'_j),(u'_i,v'_i)]\in \tH_{m+l}(\cms^c)$, i.e., the
 matrix considered in the end of the previous proof is not only upper-triangular but also
-diagonal. This is however not true, as the following example shows...
+diagonal. This is however not true, as the following example shows.
+
+Let $g=1$, $m=2$, $p=1$, $p'=2$ and consider the classes $[a]=\epsilon\in H_1(C_1(\D))$,
+$[b]=\u_i\in \H=H_1(C_1(\S'))$; moreover let $[p',(\alpha'_j),u'_1,v'_1]$ be defined by
+$p'=2$, $\alpha'_1=1$, $u'_1=v'_1=0$. Represent $[a]$ by a point in $\D$, for example
+the point $(1/2,3/4)$; represent $[b]$ by a simple closed curve $b\in\S'$
+that intersects only once, transversely, the vertical segment passing through $a$, namely
+$\set{1/2}\times(0,1)$.
+
+Then the cycle $|p',(\alpha'_j),u'_1,v'_1|$ consists only of the cell $e^{\tup'}$ with
+$\tup'=(1,(x'_1=2),(u'_1=v'_1=0))$, and this cell intersects once, transversely,
+the cycle $\mu_*(a\otimes b)$, which is represented by the curve of configurations of two
+points in $\mrS$, one of which is fixed at $a$ whereas the other runs along $b$: indeed
+there is exactly one position for the second point to lie under $a$.
+
+Hence the algebraic intersection between these two classes is $1$, and since $p'>p$
+this is an entry strictly above the diagonal in the matrix considered in the proof
+of lemma \ref{lem:oplussplitting}.
+
+

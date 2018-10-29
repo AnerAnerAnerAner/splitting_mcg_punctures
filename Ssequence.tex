@@ -1,0 +1,66 @@
+\section{Proof of theorem \ref{thm:main}}
+We will prove theorem \ref{thm:main} by induction on $m$.
+The case $m=0$ is trivial. Suppose now $m\geq 1$.
+
+For all $m\geq$ we let $E(m)$ be the Leray-Serre spectral sequence associated with
+the bundle \ref{eq:BirmanbundleD}: its second page has the form
+\[
+ E(m)^2_{k,q}=H_k(B\Diff(\S;\partial\S\cup\D);H_q(\cms)).
+\]
+From theorem \ref{thm:Hbms*as*ggrep} we know that this spectral sequence is concentrated
+on the rows $q=0,\dots, m$.
+
+We want to prove the vanishing of all differentials appearing in the pages
+$E(m)^r$ with $r\geq 2$; the $r-$th differential takes the form
+\[
+ \partial_r\colon E(m)^r_{k,q}\to E(m)^r_{k-r,q+r-1}.
+\]
+In particular any differential $\partial_r$ exiting from the row $q=m$ is trivial,
+because it lands in a higher, hence trivial row.
+
+Fix now $q=m-l<m$, in particular $l\geq 1$; by theorem \ref{thm:Hbms*as*ggrep}, and
+in particular by lemma \ref{lem:oplussplitting}, we have a splitting of $H_k(\gg;H_{m-l}(\cms))$ as
+\begin{equation}
+\label{eq:Hksplitting}
+ \bigoplus_{p=l}^m H_k\pa{\gg;\mu_*\pa{H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))}};
+\end{equation} 
+we will now fix $l\leq p\leq m$ and show the vanishing of all differentials $\partial_r$ exiting from the
+summand with label $p$ in equation \ref{eq:Hksplitting}.
+
+Consider the map $\mu^{\cF}$ from definition \ref{defn:universalSbundle} as a map of
+bundles over the space $B\Diff(\S;\partial\S\cup\D)$:
+\[
+ \mu^{\cF}\colon C_p(\D)\times C_{m-p}(\cF_{\S'})\to C_m(\cF_{\S,\D}).
+\]
+Notice that the first bundle $C_p(\D)\times C_{m-p}(\cF_{\S'})\to B\Diff(\S;\partial\S\cup\D)$
+is the product of the space $C_p(\D)$ with the bundle $C_{m-p}(\cF_{\S'})\to B\Diff(\S;\partial\S\cup\D)$;
+therefore the spectral sequence associated with $C_p(\D)\times C_{m-p}(\cF_{\S'})$ is isomorphic,
+from the second page on, to the tensor product
+of $H_*(C_p(\D))$ and the spectral sequence associated with the bundle $(\cF_{\S'})$; the
+latter is isomorphic, in our notation, to the spectral sequence $E(m-p)$.
+In particular $\mu^{\cF}$ induces a map of spectral
+sequences
+\[
+\mu^{\cF}_*\colon H_*(C_p(\D))\otimes E(m-p)\to E(m);
+\]
+that in the second page, on the $(m-l)-$th row, restricts to
+the inclusion of one of the direct summands in equation \ref{eq:Hksplitting}:
+\[
+H_k\pa{\gg;H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))}\subset H_k\pa{\gg;H_{m-l}(\cms)}.
+\]
+
+In particular if we prove the vanishing of all differentials $\partial_r$
+% exiting from the summand
+% $H_k\pa{\gg;H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))}$
+in the first spectral sequence, then also all differentials
+$\partial_r$ exiting from the summand $H_k\pa{\gg;H_{m-l}(\cms)}$ in the
+second spectral sequence must vanish.
+
+% We observe that there is an isomorphism
+% \[
+%  H_k\pa{\gg;H_{p-l}(C_p(\D))\otimes H_{m-p}(C_{m-p}(\S'))}\simeq H_{p-l}(C_p(\D))\otimes H_k\pa{\gg; H_{m-p}(C_{m-p}(\S'))};
+% \]
+The differentials in the spectral sequence $H_*(C_p(\D))\otimes E(m-p)$
+are obtained by tensoring the identity of $H_*(C_p(\D))$ with the differentials
+of the spectral sequence $E(m-p)$; as $p\geq l\geq 1$ we know by inductive hypothesis
+that the latter vanish. Theorem \ref{thm:main} is proved.

@@ -1,4 +1,8 @@
 \section{Preliminaries}
+\label{sec:Preliminaries}
+In the whole article $\Z_2$-coefficients for homology and cohomology will be understood,
+unless explicitly stated otherwise.
+
 In this section we recollect some classical definitions and results about braid groups and mapping class groups.
 By $\sg$ we will always denote a compact, smooth, orientable surface of genus $g$ with one parametrised
 boundary component $\partial \sg$; by $\sgm$ we denote a surface $\sg$ with a choice of $m$ distinct
@@ -34,52 +38,129 @@ called the \emph{braid group on $m$ strands of $\sg$} and is denoted by $\bms$.
 
 \begin{defn}
  \label{def:mcg}
- Let $\Diff(\sg)$ be the group of diffeomorphisms of $\sg$ that fix $\partial\sg$ pointwise,
- endowed with the Whitney $C^{\infty}-$topology. We denote by $\gg=\pi_0(\Diff(\sg))$ its group of connected
+ Let $\Diff(\sg;\partial\sg)$ be the group of diffeomorphisms of $\sg$ that fix $\partial\sg$ pointwise,
+ endowed with the Whitney $C^{\infty}-$topology. We denote by $\gg=\pi_0(\Diff(\sg;\partial\sg))$ its group of connected
  components, called also the \emph{mapping class group} of $\sg$.
  
- Similarly let $\Diff(\sgm)$ be the group of diffeomorphisms of $\sgm$ that fix $\partial(\sg)$
- pointwise and permute the $m$ punctures, and let $\ggm=\pi_0(\Diff(\sgm))$ be its
+ Similarly let $\Diff(\sgm;\partial\sgm)$ be the group of diffeomorphisms of $\sgm$ that fix $\partial(\sg)$
+ pointwise and permute the $m$ punctures, and let $\ggm=\pi_0(\Diff(\sgm;\partial\sgm))$ be its
  group of connected components, called the mapping class group of $\sgm$.
  \end{defn}
  A classical result by Earle and Schatz (\cite{EarleSchatz}) ensures that the connected components
- of $\Diff(\sg)$ are contractible. In particular $B\Diff(\sg)\simeq B\gg$ is a classifying space for
- the group $\gg$ and we call $\cF_{g,1}\to B\gg$ the universal $\sg-$bundle over $B\gg$, corresponding to
- the bundle
+ of $\Diff(\sg)$ are contractible. In particular $B\Diff(\sg;\partial\sg)\simeq B\gg$ is
+ a classifying space for
+ the group $\gg$, i.e. a space of type $K(\gg,1)$; we call $\cF_{g,1}\to B\Diff(\sg;\partial\sg)$ the universal
+ $\sg-$bundle
  \[
-  \sg\times_{\Diff(\sg)}E\Diff(\sg)\to B\Diff(\sg).
+  \sg\times_{\Diff(\sg;\partial\sg)}E\Diff(\sg;\partial\sg)\to B\Diff(\sg;\partial\sg).
  \]
 Applying the construction of the $m-$th unordered configuration space fiberwise we obtain a bundle
-$C_m(\cF_{g,1})\to B\gg$ with fiber $C_m(\sg)$.
+$C_m(\cF_{g,1})\to B\Diff(\sg;\partial\sg)$ with fiber $C_m(\sg)$.
 
 The space $C_m(\cF_{g,1})$ is a classifying space for the
 group $\ggm$ and the Birman exact sequence \ref{eq:Birman} is obtained by taking fundamental
 groups of the spaces
 \begin{equation}\label{eq:Birmanbundle}
-C_m(\sg)\to C_m(\cF_{g,1})\to B\gg.
+C_m(\sg)\to C_m(\cF_{g,1})\to B\Diff(\sg;\partial\sg).
 \end{equation}
 
-% \begin{defn}
-%  \label{def:modulispaces}
-% We denote by $\mg$ the moduli space of Riemann surfaces $\sg$ of genus $g$ 
-%  with one parametrised
-%  boundary component, and by $\mgm$ the moduli space of Riemann surfaces $\sgm$ with one
-%  parametrised boundary component and $m$ unordered punctures.
-%  There is a natural fiber bundle map
-%  \[
-%   \pi\colon \mgm\to\mg
-%  \]
-% which forgets the position of the punctures. The fiber of $\pi$ is the configuration space of $m$ unordered
-% points in the interior of $\sg$, i.e.
-% \[
-%  C_m(\sg)=\set{(p_1,\dots,p_m) \in \mathring{\sgigma}_{g,1}^m  \,|\,  p_i\neq p_j  \,\forall i\neq j}
-% \]
-% \end{defn}
-% 
-% The Birman exact sequence \ref{eq:Birman} can be obtained from the bundle
-% \begin{equation}\label{eq:Birmanbundle}
-%  C_m(\sg)\to\mgm\to\mg
-% \end{equation}
-% by computing all fundamental groups: indeed the three spaces appearing in \ref{eq:Birmanbundle} are
-% the classifying spaces of the groups in \ref{eq:Birman}.
+In the whole article the genus $g$ of the surfaces that we consider is supposed to be fixed,
+unless explicitly stated otherwise, and we will abbreviate $\S=\sg$.
+We denote by $\D$ the open disc $\mathring{\Sigma}_{0,1}$.
 
+It will be useful, for many constructions, to choose an embedding
+$\D\hookrightarrow\mrS$ near $\partial\S$ and to replace
+$\Diff(\S;\partial\S)$ with its subgroup $\Diff(\S;\partial\S\cup\D)$ of diffeomorphisms
+of $\S$ that fix pointwise both $\partial\S$ and $\D$: here when we say that $\D$ is embedded
+\emph{near $\partial\S$} we mean that there is a compact subsurface $\S'\subset\S$
+such that $\S$ is the boundary connected sum $\S'\natural\bar\D$.
+From now on we suppose such an embedding to be fixed and we consider $\D$ as a subspace
+of $\mrS$. In section \ref{sec:HBraidSurf} we will specify an
+embedding in a particular model for $\mrS$ that we will define.
+
+The construction of definition \ref{defn:cms} can be specialised to the open
+surfaces $\D$ and $\S'$, yielding spaces $C_m(\D)$ and $C_m(\S')$ respectively.
+
+The inclusion $\Diff(\S;\partial\S\cup\D)\subset\Diff(\S;\partial\S)$ is a homotopy
+equivalence, hence the previous constructions are equivalent to the ones that we
+give in the next definition.
+\begin{defn}
+\label{defn:universalSbundle}
+We call $\cF_{\S,\D}\to B\Diff(\S;\partial\S\cup\D)$
+the universal $\S-$bundle
+ \[
+  \S\times_{\Diff(\S;\partial\S\cup\D)}E\Diff(\S;\partial\S\cup\D)\to B\Diff(\S;\partial\S\cup\D).
+ \]
+The group $\Diff(\S;\partial\S\cup\D)$ acts on $\S'$ by restriction of diffeomorphisms;
+the space $\cF_{\S,\D}$ contains subspaces
+\[
+ \cF_{\S'}= \S'\times_{\Diff(\S;\partial\S\cup\D)}E\Diff(\S;\partial\S\cup\D)
+\]
+and $\D\times B\Diff(\S;\partial\S\cup\D)$, fibering over $B\Diff(\S;\partial\S\cup\D)$
+with fibers $\S'$ and $\D$ respectively.
+
+Applying the construction of the $m-$th unordered configuration space fiberwise, we obtain spaces
+$C_m(\cF_{\S,\D})$, $C_m(\cF_{\S'})$ and $C_m(\D)\times B\Diff(\S;\partial\S\cup\D)$,
+all fibering over $B\Diff(\S;\partial\S\cup\D)$ fibers, respectively, $\cms$,
+$C_m(\S')$ and $C_m(\D)$.
+
+For all $0\leq p\leq m$ there is a natural map
+\[
+ \mu\colon C_p(\D)\times C_{m-p}(\S')\to \cms
+\]
+which consists on the union of configurations:
+ \[
+  \mu(\set{P_1,\dots,P_p};\set{P'_1,\dots,P'_{m-p}})=\set{P_1,\dots,P_p,P'_1,\dots,P'_{m-p}}\in\cms.
+ \]
+We can apply this construction to each couple of fibers of $C_m(\cF_{\S,\D})$ and $C_{m-p}(\cF_{\S'})$
+over the same point of $ B\Diff(\S;\partial\S\cup\D)$, obtaining a map $\mu^{\cF}$:
+\[
+ \mu^{\cF}\colon C_p(\D)\times C_{m-p}(\cF_{\S'})\to C_m(\cF_{\S,\D}).
+\]
+If we see the domain of $\mu^{\cF}$ as a fibered product
+\[
+ \pa{C_m(\D)\times B\Diff(\S;\partial\S\cup\D)}\times_{B\Diff(\S;\partial\S\cup\D)}C_{m-p}(\cF_{\S'}),
+\]
+then the map $\mu^{\cF}$ is a map of bundles over $B\Diff(\S;\partial\S\cup\D)$, and corresponding
+map on fibers is precisely $\mu$.
+\end{defn}
+The fiber bundle \ref{eq:Birmanbundle} corresponding to the Birman exact sequence \ref{eq:Birman}
+can now be replaced by the following one
+\begin{equation}\label{eq:BirmanbundleD}
+\cms\to C_m(\cF_{\S,\D})\to B\Diff(\S;\partial\S\cup\D).
+\end{equation}
+We conclude this section by recalling the structure of $H_*(C_m(\D))$.
+
+The cohomology of $C_m(\D)$ with coefficients in $\Z_2$ was first computed by Fuchs in
+\cite{Fuchs:CohomBraidModtwo}: we will recall this computation more in detail in section
+\ref{sec:HBraidSurf}, where we will make in detail a similar computation.
+
+In \cite[Chap.III]{CLM} Cohen considers $\coprod_{m\geq 0}C_m(\D)$ as an
+algebra over the operad of little $2-$cubes, and in particular describes its
+homology with coefficients in $\Z_2$ as follows:
+\begin{equation}
+ \label{eq:Cohen}
+H_*\pa{\coprod_{m\geq 0}C_m(\D)}\simeq \Z_2\left[Q^j\epsilon \, |\, j\geq 0\right].
+\end{equation}
+
+Here $\epsilon\in H_0(C_1(\D))$ is the fundamental class, and for all
+$k,m\geq 0$ we denote by $Q\colon H_k(C_m(\D))\to H_{2k+1}(C_{2m}(\D))$
+the first Dyer-Lashof operation. In particular $Q^j\epsilon$ is the generator of
+$H_{2^j-1}(C_{2^j}(\D))\simeq\Z_2$.
+
+The isomorphism in equation \ref{eq:Cohen} is
+an isomorphism of bigraded rings: the left-hand side is a ring with the Pontryagin product,
+and the right-hand side is a polynomial ring in the infinitely many variables $\epsilon,Q\epsilon,Q^2\epsilon,\dots$;
+the bidegree is given by
+$*$, called \emph{degree}, which is the homological degree,
+and $m$, called \emph{weight}, which is the index of the connected component
+on which the homology class is supported, or informally the number of points
+involved in the construction of a homology class.
+
+In this article we will only need the isomorphism in equation \ref{eq:Cohen} to hold as
+an isomorphism of bigraded $\Z_2-$vector spaces.
+In particular for all choices of natural numbers $(\alpha_j)_{j\geq 0}$ with all but finitely
+many $\alpha_j=0$, we will consider the monomial $\prod_j\pa{Q^j\epsilon}^{\alpha_j}$, which is
+a homology class in some bidegree $(*,m)$: all that
+we are going to need is that the set of these monomials is a bigraded basis for the
+left-hand side of equation \ref{eq:Cohen}.

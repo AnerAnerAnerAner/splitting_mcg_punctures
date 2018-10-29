@@ -1,24 +1,23 @@
 \section{Homology of configuration spaces of surfaces}
+\label{sec:HBraidSurf}
 We want to understand the homology groups $H_*(\bms)=H_*(C_m(\sg))$: we
 are interested in these groups as they appear as the homology of the fiber
 in the Leray-Serre spectral sequence associated to
-the Birman exact sequence \ref{eq:Birman} or, which is the same, to the bundle
-\ref{eq:Birmanbundle}. In particular we are interested in $H_*(C_m(\S))$
-\emph{as a $\Z_2-$representation of the group $\gg$.}
-% From now on $\Z_2-$coefficients in homology
-% and cohomology will always be understood.
+\ref{eq:Birman}, \ref{eq:Birmanbundle} or \ref{eq:BirmanbundleD}.
+In particular we are interested in $H_*(C_m(\S))$
+as a $\Z_2-$representation of the group $\gg$.
 
-In \cite{LM} L\"offler and Milgram proved that this must be a symplectic
-representation of the mapping class group. By \emph{symplectic} we mean the following:
+In \cite{LM} L\"offler and Milgram proved that this must be a $\Z_2-$symplectic
+representation of the mapping class group. By \emph{$\Z_2-$symplectic} we mean the following:
 \begin{defn}
  \label{defn:symplrep}
  Let $\H=H_1(\S)\simeq\Z_2^{2g}$.
  The natural action of $\gg$ on $\H$ induces a surjective map
- $\gg\to Sp_{2g}(\Z_2)$. A representation of $\gg$ over $\Z_2$ is called \emph{symplectic}
+ $\gg\to Sp_{2g}(\Z_2)$. A representation of $\gg$ over $\Z_2$ is called \emph{$\Z_2-$symplectic}
  if it is a pull-back of a representation of $Sp_{2g}(\Z_2)$ along this map.
 \end{defn}
 
-In \cite{BCM} B\"odigheimer, Cohen and Taylor computed $H_*(C_m(\sg))$ \emph{as a graded $\Z_2-$vector space}.
+In \cite{BCT} B\"odigheimer, Cohen and Taylor computed $H_*(C_m(\sg))$ \emph{as a graded $\Z_2-$vector space}.
 Their method provides all Betti numbers, but the action of $\gg$ cannot be easily deduced, as
 their descripition of $H_*(C_m(\sg))$ depends on a handle decomposition of $\sg$, which is not preserved,
 not even up to isotopy, by diffeomorphisms of $\sg$.
@@ -29,7 +28,7 @@ it doesn't appear in the literature.
  \label{thm:Hbms*as*ggrep}
  There is an isomorphism of bigraded $\Z_2-$representations of $\gg$
  \[
-  \bigoplus_{m\geq 0} H_*\pa{C_m(\S)}\simeq \Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]\otimes\Sym_{\bullet}(\H).
+  \bigoplus_{m\geq 0} H_*\pa{C_m(\sg)}\simeq \Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]\otimes\Sym_{\bullet}(\H).
  \]
  Here we mean the following:
  \begin{itemize}
@@ -38,34 +37,50 @@ it doesn't appear in the literature.
   on which the homology class is supported, i.e. by the number $m$ of points
   involved in constructing the homology class; we call $*$ the \emph{degree} and $m$ the \emph{weight},
   and write $(*,m)$ for the bidegree;
-  \item for $j\geq 0$, $Q^j\epsilon$ is the image in $H_{2^j-1}(C_{2^j}(\S))$ of a generator
-  of the group $H_{2^j-1}(C_{2^j}(\Sigma_{0,1}))\simeq \Z_2$ 
-  under the natural map induced by an embedding $\Sigma_{0,1}\hookrightarrow\S$,
+  \item for $j\geq 0$, $Q^j\epsilon$ is the image in $H_{2^j-1}(C_{2^j}(\sg))$ of a generator
+  of the group $H_{2^j-1}(C_{2^j}(\D))\simeq \Z_2$ 
+  under the natural map induced by the embedding $\D\hookrightarrow\mrS$,
   and $\Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]$ is the polynomial ring on
   infinitely many variables $\epsilon,Q\epsilon,Q^2\epsilon,\dots$;
   \item $\H=H_1(\sg)$ is identified with $H_1(C_1(\S))$ in a natural way, and $\Sym_{\bullet}(\H)$ is the
   symmetric algebra on $\H$;
-  \item degrees and weights are extended on right by the usual multiplicativity-additivity rule;
+  %\item degrees and weights are extended on right by the usual multiplicativity-additivity rule;
   \item the action of $\gg$ on right is the diagonal action on the product: it is a trivial action
-  on the factor $\Z_2[Q^j\epsilon\,|\, j\geq 0]$ and it is the symplectic action induced by the action on $\H$ on the
-  factor $\Sym_{\bullet}(\H)$.
+  on the factor $\Z_2[Q^j\epsilon\,|\, j\geq 0]$ and it is the $\Z_2-$symplectic action on the
+  factor $\Sym_{\bullet}(\H)$ induced by the $\Z_2-$symplectic action on $\H$.
   \end{itemize}
-  
-  Notice that for any bi-homogeneus element in the right-hand side, the weight is greater or equal than
-  the degree: indeed factors of the form $Q^j\epsilon$ have weight strictly higher than the degree,
-  whereas factors in $\H$ and its symmetric powers have equal weight and degree.
 \end{thm}
+Notice that for any bi-homogeneus element in the right-hand side, the weight is greater or equal than
+the degree: indeed factors of the form $Q^j\epsilon$ have weight strictly higher than the degree,
+whereas factors in $\H$ and its symmetric powers have equal weight and degree.
+  
+Notice that in the case $g=0$ the group $\Gamma_{0,1}$ is trivial and the previous theorem
+reduces to equation \ref{eq:Cohen}.
+% isomorphism of bigraded vector spaces
+% \begin{equation}
+% \label{eq:genuszero}
+% \bigoplus_{m\geq 0} H_*\pa{C_m(\Sigma_{0,1})}\simeq \Z_2[Q^j\epsilon\,|\, j\geq 0].
+% \end{equation}
+% This isomorphism was essentially proved by Fuchs in \ref{Fuchs:CohomBraidModtwo}. Moreover the left hand
+% side is the homology of the space $\coprod_{m\geq 0} C_m(\Sigma_{0,1})$, which has a natural structure
+% of algebra over the operad $E^2$ of little $2-$cubes. The isomorphism in equation \ref{eq:genuszero}
+% is an isomorphism of rings (using the Pontryagin product on the left hand side), and $Q$ represents here
+% the Araki-Kudo-Dyer-Lashof operation $Q\colon H_*(X;\Z_2)\to H_{2*+1;\Z_2}(X)$,
+% which is defined for any $E^2-$algebra $X$; $\epsilon\in H_0(C_1(\Sigma_{0,1}))$ is the generator.
+% This explains our notation; we refer to Cohen \cite[Chap.3]{CLM} for more details.
+
 In this section we will prove that there is an isomorphism of \emph{bigraded $\Z_2-$vector spaces}
 as in theorem \ref{thm:Hbms*as*ggrep}; in the next section we will deal with the action of
-$\gg$. In these two sections we abbreviate $\S=\sg$.
+$\gg$.
+%In these two sections we abbreviate $\S=\sg$.
 
-Since we work with $\Z_2-$coefficients, it is equivalent to compute homology or cohomology,
-and in this section we will prefer to compute, for each bidegree $(*,m)$, $H^*(\cms)$ as a graded
-$\Z_2-$vector space; the dual graded vector space $H_*(\cms)$ is of course abstractly isomorphic,
-i.e. it has the same dimension.
+Since we work with coefficients in the field $\Z_2$, it is equivalent to compute homology or cohomology,
+and in this section we will prefer to compute $H^*(\cms)$ for all bidegrees $(*,m)$.
+% the dual graded vector space $H_*(\cms)$ is abstractly isomorphic,
+% i.e. it has the same dimension.
 
 We will mimic the method used by Fuchs (\cite{Fuchs:CohomBraidModtwo}) to compute the $\Z_2-$cohomology
-of the configuration space of the plane.
+of $C_m(\D)$.
 As already said this computation recovers a known result, but it has the advantage of
 being quite elementary and of providing a part of
 the geometric insight that we will need in the next section.
@@ -74,6 +89,7 @@ In the whole section we assume $m\geq 0$ to be fixed.
 
 We first introduce a space $\T(\S)$ which is homeomorphic to $\mrS$, the interior of $\S$. The construction
 corresponds to a handle decomposition of $\S$ with one $0-$handle and $2g$ $1-$handles.
+
 \begin{defn}
 \label{defn:Tsg}
 If $g=0$, hence $\S=\sg$ is the disc, we set $\T(\S)=(0,1)^2$, the interior of the unit square. Assume
@@ -97,10 +113,15 @@ by identifying in the canonical way the two intervals in each couple.
 For $1\leq i\leq g$, we identify $I^l_{2i-1}$ with $I^r_{2i}$, obtaining an open interval $\U_i\subset\T(\S)$,
 and we identify $I^r_{2i-1}$ with $I^l_{2i}$, obtaining an open interval $\V_i\subset\T(\S)$.
 Each interval $\U_i,\V_i$ has a natural parametrisation by $(0,1)$.
-\end{defn}
+
 The space $\T(\S)$ is homeomorphic to $\mrS$. From now
 on we will identify the two open surfaces and in particular we will identify $\cms$ with the
 space of configurations of $m$ points in $\T(\S)$.
+
+Let $\D\subset\mrS$ be the open square $(1/4;3/4)\times(1/2,1)$:
+$\D$ is an open disc in $\mrS$ near $\partial\S$ and 
+it is disjoint from all $\U_i$'s and $\V_i$'s.
+\end{defn}
 
 In the following we will consider the one-point compactification of some spaces that
 happen to be open manifolds. For a space $\mathcal{M}$ we denote by $\mathcal{M}^c$ its one-point
@@ -263,25 +284,52 @@ for the definition), in particular the numbers $u_i,v_i$
 don't change along the boundary map of $F_p/F_{p-1}$, and this latter chain complex splits as a direct sum
 of chain complexes indexed by splittings $m-p=\sum_{i=1}^g (u_i+v_i)$ as above.
 It is then immediate to identify the inner differentials
-with the ones one would have in the case $g=0$.
+with the ones one would have in the case $g=0$, i.e. for the surface $\Sigma_{0,1}$.
 
-We notice that $\tCh_*(C_p(\Sigma_{0,1}))$ is exactly the chain complex described by Fuchs in
-\cite{Fuchs:CohomBraidModtwo}; in particular its homology is generated by symmetric chains:
+We notice that $\tCh_*(C_p(\Sigma_{0,1})^c)$ is exactly the chain complex described by Fuchs in
+\cite{Fuchs:CohomBraidModtwo}, so we pause for a moment and
+recall some classical facts about the cohomology of configuration
+spaces of the disc.
 \begin{defn}
 \label{defn:symchain}
-Given a splitting $p=\sum_{j=0}^{\infty}\alpha_j2^j$ of $p$ into powers of 2, with multiplicities $\alpha_i$,
-the associated symmetric chain in $\tCh_*(C_p(\Sigma_{0,1}))$
+Given a splitting $p=\sum_{j=0}^{\infty}\alpha_j2^j$ of $p$ into powers of 2, with multiplicities $\alpha_j$,
+the associated symmetric chain in $\tCh_*(C_p(\Sigma_{0,1})^c)$
 is the sum of all $e^{\tup}$ where $\tup$ ranges among all tuples
 $\pa{l,(x_i)_{i\leq l}}$ such that
 \begin{itemize}
- \item $l=\sum_{i=1}^{\infty}\alpha_i$;
+ \item $l=\sum_{j=1}^{\infty}\alpha_j$;
  \item every $x_i$ is a power of 2;
  \item for all $j\geq 0$ there are exactly $\alpha_j$ indices $i$ such that $x_i=2^j$.
 \end{itemize}
 Here and in the following it is understood that $\alpha_j=0$ for all but finitely many indices $j$.
-\end{defn}
 
-If we run the Leray spectral sequence associated to the filtered chain complex $\tCh_*(\cms)$,
+We denote by $|(\alpha_j)_{j\geq 0}|\in\tCh_{p+l}(C_p(\Sigma_{0,1})^c)$ the symmetric chain
+and by $[(\alpha_j)_{j\geq 0}]\in\tH_{p+l}(C_p(\Sigma_{0,1})^c)$ the associated homology class.
+\end{defn}
+In \cite{Fuchs:CohomBraidModtwo} Fuchs shows that a graded basis for $\tH_*(C_p(\Sigma_{0,1})^c)$
+is given by the collection of all classes $[(\alpha_j)_{j\geq 0}]$ satisfying $\sum\alpha_j2^j$.
+
+Using Poincaré-Lefschetz duality we obtain a basis for the cohomology of $C_p(\Sigma_{0,1})$;
+the dual basis of $H_*(C_p(\Sigma_{0,1}))$
+happens to be the basis of monomials
+$\prod_{j\geq 0}(Q^i\epsilon)^{\alpha_j}\in H_*(C_p(\Sigma_{0,1}))$ of weight $m$, using
+the isomorphism \ref{eq:Cohen} in its full meaning (i.e. as an isomorphism of rings,
+where $Q$ denotes the first Dyer-Lashof operation).
+
+% This notation is compatible, after interpreting equation \ref{eq:genuszero} as an isomorphism
+% of rings, with the results of \cite[Chap.3]{CLM}: the monomials constructed there, using
+% the Pontryagin product and the operation $Q$, are really the dual basis of the basis of
+% symmetric chains for cohomology.
+
+We will not need this finer result in this article, so the expression
+$\prod_{j\geq 0}(Q^i\epsilon)^{\alpha_j}\in H_{p-l}(C_p(\Sigma_{0,1}))$ will only denote
+the (unique) homology class whose algebraic intersection with $[(\alpha'_j)]\in\tH_{p+l}(C_p(\Sigma_{0,1})^c)$
+is $1\in\Z_2$ if and only if the equality $\alpha_j=\alpha'_j$ holds for all $j\geq 0$.
+% i.e. we \emph{define} monomials as the dual basis of the basis of symmetric chains, and keep considering
+% \ref{eq:Cohen} only as an isomorphism of bigraded vector spaces.
+
+We now go back to the filtered chain complex $\tCh_*(\cms^c)$:
+if we run the associated Leray spectral sequence,
 the $E^1-$page contains on the $p-$th column the homology of $F_p/F_{p-1}$; as we have seen this consists of
 many copies of the homology of $\tCh_*(C_p(\Sigma_{0,1}))$, each generated by symmetric chains.
 
@@ -311,8 +359,10 @@ every left differential
 of one cell $e^{\tup}$ in the generalised symmetric chain cancels out with a right differential
 of possibly another cell $e^{\tup'}$.
 
-In particular the spectral sequence collapses on its first page and $H_*(\cms^c)$
-has a $\Z_2$-basis given by generalised symmetric chains. We have the following lemma:
+In particular the spectral sequence collapses on its first page and
+% $H_*(\cms^c)$
+% has a $\Z_2$-basis given by generalised symmetric chains.
+we have the following lemma:
 \begin{lem}
 \label{lem:gensymchain}
 The homology $H_*(\cms^c)$ has a graded basis given by the classes $[p,(\alpha_j),(u_i,v_i)]$
@@ -325,7 +375,7 @@ associated to generalised symmetric chains.
 %  \item a splitting $p=\sum_{j=0}^{\infty}\alpha_j2^j$ with $\alpha_j\geq 0$.
 % \end{itemize}
 % The homology class $[p,(u_i,v_i),(\alpha_j)]\in H_*(\cms^c)$ has homological degree
-% $m+\sum_{j=1}^{\infty}\alpha_i$.
+% $m+\sum_{j=1}^{\infty}\alpha_j$.
 \end{lem}
 % To interpret this class
 % as a monomial in the tensor product of theorem \ref{thm:Hbms*as*ggrep} we need the following definition.
@@ -337,7 +387,7 @@ associated to generalised symmetric chains.
 We can see the $\U_i$'s and $\V_i$'s as properly embedaded $1-$manifolds in $\mrS$;
 by Poincaré-Lefschetz duality they represent classes in $H_1\pa{(\mrS)^c}\simeq H^1(\S)$,
 and in particular they form a basis
-of this cohomology group. We call $\u_i,\v_i\in H_1\pa{\mrS}$ the dual basis.
+of the latter cohomology group. We call $\u_i,\v_i\in H_1\pa{\mrS}$ the dual basis.
 
 % We fix simple closed curves $\u_i,\v_i$ on $\S$, for $1\leq i\leq g$, whose fundamental classes
 % $[\u_i],[\v_i]$ form the dual basis of $H_1(\S)$. We assume that, apart from the following necessary exceptions,
@@ -365,3 +415,4 @@ This shows an isomorphism of bigraded $\Z_2-$vector spaces
 and using the canonical identification of $\Z_2-$cohomology as the dual of homology, we can
 conclude that there exists an isomorphism as in theorem \ref{thm:Hbms*as*ggrep}
 at least \emph{as bigraded $\Z_2-$vector spaces}.
+
