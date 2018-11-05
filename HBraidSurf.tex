@@ -1,13 +1,13 @@
 \section{Homology of configuration spaces of surfaces}
 \label{sec:HBraidSurf}
-We want to understand the homology groups $H_*(\bms)=H_*(C_m(\sg))$: we
-are interested in these groups as they appear as the homology of the fiber
+We want to study $H_*(\bms)=H_*(\cms)$,
+which appears as the homology of the fiber
 in the Leray-Serre spectral sequence associated to
 \ref{eq:Birman}, \ref{eq:Birmanbundle} or \ref{eq:BirmanbundleD}.
 In particular we are interested in $H_*(C_m(\S))$
 as a $\Z_2-$representation of the group $\gg$.
 
-In \cite{LM} L\"offler and Milgram proved that this must be a $\Z_2-$symplectic
+In \cite{LM} L\"offler and Milgram implicitly proved that $H_*(\bms)=H_*(\cms)$ is a $\Z_2-$symplectic
 representation of the mapping class group. By \emph{$\Z_2-$symplectic} we mean the following:
 \begin{defn}
  \label{defn:symplrep}
@@ -17,10 +17,10 @@ representation of the mapping class group. By \emph{$\Z_2-$symplectic} we mean t
  if it is a pull-back of a representation of $Sp_{2g}(\Z_2)$ along this map.
 \end{defn}
 
-In \cite{BCT} B\"odigheimer, Cohen and Taylor computed $H_*(C_m(\sg))$ \emph{as a graded $\Z_2-$vector space}.
-Their method provides all Betti numbers, but the action of $\gg$ cannot be easily deduced, as
-their descripition of $H_*(C_m(\sg))$ depends on a handle decomposition of $\sg$, which is not preserved,
-not even up to isotopy, by diffeomorphisms of $\sg$.
+In \cite{BCT} B\"odigheimer, Cohen and Taylor computed $H_*(\cms)$ \emph{as a graded $\Z_2-$vector space}.
+Their method provides all Betti numbers, but the action of $\gg$ cannot be easily deduced:
+their descripition of $H_*(\cms)$ depends on a handle decomposition of $\S$, which is not preserved
+by diffeomorphisms of $\S$, not even up to isotopy,.
 
 In this section and in the next one we will prove the following theorem; to the best of the author's knowledge
 it doesn't appear in the literature.
@@ -28,7 +28,7 @@ it doesn't appear in the literature.
  \label{thm:Hbms*as*ggrep}
  There is an isomorphism of bigraded $\Z_2-$representations of $\gg$
  \[
-  \bigoplus_{m\geq 0} H_*\pa{C_m(\sg)}\simeq \Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]\otimes\Sym_{\bullet}(\H).
+  \bigoplus_{m\geq 0} H_*\pa{\cms}\simeq \Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]\otimes\Sym_{\bullet}(\H).
  \]
  Here we mean the following:
  \begin{itemize}
@@ -37,7 +37,7 @@ it doesn't appear in the literature.
   on which the homology class is supported, i.e. by the number $m$ of points
   involved in constructing the homology class; we call $*$ the \emph{degree} and $m$ the \emph{weight},
   and write $(*,m)$ for the bidegree;
-  \item for $j\geq 0$, $Q^j\epsilon$ is the image in $H_{2^j-1}(C_{2^j}(\sg))$ of a generator
+  \item for $j\geq 0$, $Q^j\epsilon$ is the image in $H_{2^j-1}(C_{2^j}(\S))$ of a generator
   of the group $H_{2^j-1}(C_{2^j}(\D))\simeq \Z_2$ 
   under the natural map induced by the embedding $\D\hookrightarrow\mrS$,
   and $\Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]$ is the polynomial ring on
@@ -45,9 +45,9 @@ it doesn't appear in the literature.
   \item $\H=H_1(\sg)$ is identified with $H_1(C_1(\S))$ in a natural way, and $\Sym_{\bullet}(\H)$ is the
   symmetric algebra on $\H$;
   %\item degrees and weights are extended on right by the usual multiplicativity-additivity rule;
-  \item the action of $\gg$ on right is the diagonal action on the product: it is a trivial action
-  on the factor $\Z_2[Q^j\epsilon\,|\, j\geq 0]$ and it is the $\Z_2-$symplectic action on the
-  factor $\Sym_{\bullet}(\H)$ induced by the $\Z_2-$symplectic action on $\H$.
+  \item the action of $\gg$ on right is the tensor product of the trivial action
+  on the factor $\Z_2[Q^j\epsilon\,|\, j\geq 0]$, and of the action on
+  $\Sym_{\bullet}(\H)$ which is induced by the $\Z_2-$symplectic action on $\H$.
   \end{itemize}
 \end{thm}
 Notice that for any bi-homogeneus element in the right-hand side, the weight is greater or equal than
@@ -92,8 +92,8 @@ corresponds to a handle decomposition of $\S$ with one $0-$handle and $2g$ $1-$h
 
 \begin{defn}
 \label{defn:Tsg}
-If $g=0$, hence $\S=\sg$ is the disc, we set $\T(\S)=(0,1)^2$, the interior of the unit square. Assume
-now $g\geq 1$.
+If $g=0$, hence $\S=\Sigma_{0,1}$ is the disc, we set $\T(\S)=(0,1)^2$, the interior of the unit square. Assume
+now $g\geq 1$, and see figure \ref{fig:defTS} to visualize the following construction.
 
 Dissect the interval $[0,1]$ into $2g$ equal subintervals through the points $\cP_i=\frac{i}{2g}$ for $0\leq i\leq 2g$
 (for $i=0,2g$ we get the two endpoints of $[0,1]$).
@@ -118,10 +118,19 @@ The space $\T(\S)$ is homeomorphic to $\mrS$. From now
 on we will identify the two open surfaces and in particular we will identify $\cms$ with the
 space of configurations of $m$ points in $\T(\S)$.
 
-Let $\D\subset\mrS$ be the open square $(1/4;3/4)\times(1/2,1)$:
+In this model we fix $\D\subset\mrS$ to be the open square $(1/4;3/4)\times(1/2,1)$:
 $\D$ is an open disc in $\mrS$ near $\partial\S$ and 
-it is disjoint from all $\U_i$'s and $\V_i$'s.
+it is disjoint from all $\U_i$'s and $\V_i$'s. The interior of the surface $\S'$
+is then identified with $\T(\S)\setminus [1/4,3/4]\times[1/2,1)$.
+
+
 \end{defn}
+
+\begin{figure}\centering
+ \includegraphics[scale=0.7]{figures/defTS.png}
+ \caption{The space $\T(\S)$ for $\S=\Sigma_{3,1}$.}
+\label{fig:defTS}
+\end{figure}
 
 In the following we will consider the one-point compactification of some spaces that
 happen to be open manifolds. For a space $\mathcal{M}$ we denote by $\mathcal{M}^c$ its one-point
@@ -153,11 +162,12 @@ with the condition that
 % Similarly we will use the letter $\M$ to denote any of the intervals $\U_i,\V_i,\W_i$;
 % they will correspond to the letters $U_i,V_i,W_i$, so we also define a subset
 % $\bsymb=\set{(U_i,V_i)_{i\leq g},(W_i)_{i\leq n-1}}\subset\symb$.
-
+In symbols we write $\tup=(l,(x_i)_{1\leq i\leq l},(u_i,v_i)_{1\leq i\leq g})$.
 The \emph{degree} of $\tup$ is defined as $m+l$.
 
 For a tuple $\tup$ let $e^{\tup}$ be the subspace
-of $\cms$ of configurations of $m$ points in $\mrS$ such that
+of $\cms$ of configurations of $m$ points in $\mrS$ such that the following conditions hold
+(see picture \ref{fig:defetup}):
 \begin{itemize}
  \item for all $1\leq i\leq g$, exactly $u_i$ points lie on $\U_i$
  and exactly $v_i$ points lie on $\V_i$;
@@ -167,6 +177,15 @@ of $\cms$ of configurations of $m$ points in $\mrS$ such that
  respectively.
 \end{itemize}
 \end{defn}
+
+
+\begin{figure}\centering
+ \includegraphics[scale=0.7]{figures/defetup.png}
+ \caption{A configuration in the subspace $e^{\tup}\subset C_{14}(\S)$, for the tuple $\tup=(3,(3,1,2),(1,0,2,3,0,2))$. }
+\label{fig:defetup}
+\end{figure}
+
+
 The space $e^{\tup}$ is homeomorphic to \emph{the interior} of the following product of simplices:
 
 % We want to show that the collection of the $e_h$ for varying $h$, together with
@@ -207,10 +226,10 @@ $ \SP^m\pa{(\mrS)^c}$ and then to $\cms^c$: the composition
 is the map $\phi^{\tup}$.
 \end{enumerate}
 
-Therefore the collection of the $e^{\tup}$, together with the $0-$cell given by $\infty$,
-give a cell decomposition of $\cms^c$, with characteristic maps of cells $\phi^{\tup}$.
+Therefore the collection of the $e^{\tup}$'s, together with the $0-$cell $\infty$,
+gives a cell decomposition of $\cms^c$, with characteristic maps of cells $\phi^{\tup}$.
 
-We can easily use these characteristic maps to compute the \emph{reduced} cellular chain complex of $\cms^c$
+We can use these characteristic maps to compute the \emph{reduced} cellular chain complex of $\cms^c$
 with coefficients in $\Z_2$, which
 reads as follows.
 \begin{lem}
@@ -239,7 +258,7 @@ Then $[\partial \tup:\tup']=0$ unless one (and exactly one) of the following sit
  \[
   [\partial \tup\colon\tup']=\prod_{i=1}^g\binom{u_i+\delta u_i}{u_i}\binom{v_i+\delta v_i}{v_i}.
  \]
- This binomial coefficient may be anyway equal to $0\in\Z_2$.
+ This product of binomial coefficients may be anyway equal to $0\in\Z_2$.
  \item $l\geq 1$ and $\tup'$ is obtained from $\tup$ by decreasing $l$ by 1, choosing a splitting of $x_l$
  in integers $\delta u_i,\delta v_i\geq 0$
  \[
@@ -250,7 +269,7 @@ Then $[\partial \tup:\tup']=0$ unless one (and exactly one) of the following sit
  \[
   [\partial \tup\colon\tup']=\prod_{i=1}^g\binom{u_i+\delta u_i}{u_i}\binom{v_i+\delta v_i}{v_i}.
  \]
- This binomial coefficient may be anyway equal to $0\in\Z_2$.
+ This product of binomial coefficients may be anyway equal to $0\in\Z_2$.
 \end{itemize}
 \end{lem}
 \begin{proof}
@@ -264,25 +283,26 @@ Then $[\partial \tup:\tup']=0$ unless one (and exactly one) of the following sit
  hits homeomorphically the open cell $e^{\tup'}$
  exactly as many times as specified in the statement
  of the lemma for the cases $1\leq i\leq l-1$,
- $i=0$ and $i=l$ respectively, and no other open cell.
- We are working in $\Z_2$ so we don't have to be careful about orientations of simplices
+ $i=0$ and $i=l$ respectively, and no other open cell of dimension $m+l-1$.
+ We are working in $\Z_2$ so we don't have to be careful about orientations of cells
  and therefore about signs.
 \end{proof}
 
 We can filter the chain complex $\tilde\Ch_*(\cms^c)$ by giving norm $\sum_{i=1}^lx_i$ to
-the cell $e^{\tup}$, with $\tup=(l,(x_i)_{i\leq l},(u_i,v_i)_{i\leq g})$. By lemma \ref{lem:doperatoropenmodtwo}
-the norm is weakly decreasing along boundaries. Let $F_p\subset\tCh_*(\cms^c)$ be the subcomplex of cells
+the cell $e^{\tup}$, with $\tup=(l,(x_i)_{i\leq l},(u_i,v_i)_{i\leq g})$; for example
+the cell in figure \ref{fig:defetup} has norm 6. By lemma \ref{lem:doperatoropenmodtwo}
+the norm is weakly decreasing along differentials. Let $F_p\subset\tCh_*(\cms^c)$ be the subcomplex of cells
 of norm $\leq p$, and let $F_p/F_{p-1}$ be the $p-$th filtration stratum.
 
 Then $F_p/F_{p-1}$ is isomorphic, as a chain complex, to a direct sum of copies of $\tCh_*(C_p(\Sigma_{0,1}))$,
-one copy for each way of splitting $m-p=\sum_{i=1}^g (u_i+v_i)$ with $u_i,v_i\geq 0$; the isomorphism
+one copy for each way of splitting $(m-p)=\sum_{i=1}^g (u_i+v_i)$ with $u_i,v_i\geq 0$. The isomorphism
 doesn't preserve the degrees but shifts them by $p$.
 
 Indeed in $F_p/F_{p-1}$ all outer
 differentials vanish (see lemma \ref{lem:doperatoropenmodtwo}
-for the definition), in particular the numbers $u_i,v_i$
-don't change along the boundary map of $F_p/F_{p-1}$, and this latter chain complex splits as a direct sum
-of chain complexes indexed by splittings $m-p=\sum_{i=1}^g (u_i+v_i)$ as above.
+for the definition), and in particular the numbers $u_i,v_i$
+don't change along the differentials of $F_p/F_{p-1}$. Therefore $F_p/F_{p-1}$ splits as a direct sum
+of chain complexes indexed by splittings $(m-p)=\sum_{i=1}^g (u_i+v_i)$ as above.
 It is then immediate to identify the inner differentials
 with the ones one would have in the case $g=0$, i.e. for the surface $\Sigma_{0,1}$.
 
@@ -293,7 +313,7 @@ spaces of the disc.
 \begin{defn}
 \label{defn:symchain}
 Given a splitting $p=\sum_{j=0}^{\infty}\alpha_j2^j$ of $p$ into powers of 2, with multiplicities $\alpha_j$,
-the associated symmetric chain in $\tCh_*(C_p(\Sigma_{0,1})^c)$
+the associated \emph{symmetric chain} in $\tCh_*(C_p(\Sigma_{0,1})^c)$
 is the sum of all $e^{\tup}$ where $\tup$ ranges among all tuples
 $\pa{l,(x_i)_{i\leq l}}$ such that
 \begin{itemize}
@@ -307,12 +327,13 @@ We denote by $|(\alpha_j)_{j\geq 0}|\in\tCh_{p+l}(C_p(\Sigma_{0,1})^c)$ the symm
 and by $[(\alpha_j)_{j\geq 0}]\in\tH_{p+l}(C_p(\Sigma_{0,1})^c)$ the associated homology class.
 \end{defn}
 In \cite{Fuchs:CohomBraidModtwo} Fuchs shows that a graded basis for $\tH_*(C_p(\Sigma_{0,1})^c)$
-is given by the collection of all classes $[(\alpha_j)_{j\geq 0}]$ satisfying $\sum\alpha_j2^j$.
+is given by the collection of all classes $[(\alpha_j)_{j\geq 0}]$ satisfying $p=\sum\alpha_j2^j$.
 
-Using Poincaré-Lefschetz duality we obtain a basis for the cohomology of $C_p(\Sigma_{0,1})$;
-the dual basis of $H_*(C_p(\Sigma_{0,1}))$
+By Poincaré-Lefschetz duality this is a basis for the cohomology $H^*(C_p(\Sigma_{0,1}))$.
+The \emph{dual} basis of $H_*(C_p(\Sigma_{0,1}))$
 happens to be the basis of monomials
-$\prod_{j\geq 0}(Q^i\epsilon)^{\alpha_j}\in H_*(C_p(\Sigma_{0,1}))$ of weight $m$, using
+$\prod_{j\geq 0}(Q^i\epsilon)^{\alpha_j}\in H_*(C_p(\Sigma_{0,1}))$, that is, all monomials
+of weight $p$, using
 the isomorphism \ref{eq:Cohen} in its full meaning (i.e. as an isomorphism of rings,
 where $Q$ denotes the first Dyer-Lashof operation).
 
@@ -321,7 +342,7 @@ where $Q$ denotes the first Dyer-Lashof operation).
 % the Pontryagin product and the operation $Q$, are really the dual basis of the basis of
 % symmetric chains for cohomology.
 
-We will not need this finer result in this article, so the expression
+We will not need this finer result in this article, so in the following the expression
 $\prod_{j\geq 0}(Q^i\epsilon)^{\alpha_j}\in H_{p-l}(C_p(\Sigma_{0,1}))$ will only denote
 the (unique) homology class whose algebraic intersection with $[(\alpha'_j)]\in\tH_{p+l}(C_p(\Sigma_{0,1})^c)$
 is $1\in\Z_2$ if and only if the equality $\alpha_j=\alpha'_j$ holds for all $j\geq 0$.
@@ -339,7 +360,8 @@ For a splitting
 \[
  m=p+(m-p)=\pa{\sum_{j=0}^{\infty}\alpha_j2^j}+\pa{\sum_{i=1}^g(u_i+v_i)}
 \]
-we define a chain in $\tCh_{m+l}(\cms)$, denoted by $|p,(\alpha_j)_j,(u_i,v_i)_{i\leq g}|$: it
+let $l=\sum_{j=1}^{\infty}\alpha_j$. We define a chain in
+$\tCh_{m+l}(\cms)$, denoted by $|p,(\alpha_j)_j,(u_i,v_i)_{i\leq g}|$: it
 is obtained by summing all $e^{\tup}$ where $\tup$
 ranges among all tuples of the form $\pa{l,(x_i)_{i\leq l},(u_i,v_i)_{i\leq g}}$
 satisfying the three properties listed in definition \ref{defn:symchain}.
@@ -349,24 +371,24 @@ We call such a chain a
 by $[p,(\alpha_j),(u_i,v_i)]$
 \end{defn}
 
-It is straightforward to check that a generalised symmetric chain $|p,(\alpha_j),(u_i,v_i)|$
+We notice now that a generalised symmetric chain $|p,(\alpha_j),(u_i,v_i)|$
 is not only
 a cycle when projected to its filtration quotient $F_p/F_{p-1}$, as the $E^1-$page
 of the spectral sequence tells us, but also
 in the chain complex $\tCh_*(\cms^c)$ itself. Indeed also all outer
-differentials of a generalised symmetric chain cancel out, since
+differentials of a generalised symmetric chain cancel out: in particular
 every left differential
 of one cell $e^{\tup}$ in the generalised symmetric chain cancels out with a right differential
 of possibly another cell $e^{\tup'}$.
 
-In particular the spectral sequence collapses on its first page and
+Therefore the spectral sequence collapses on its first page and
 % $H_*(\cms^c)$
 % has a $\Z_2$-basis given by generalised symmetric chains.
 we have the following lemma:
 \begin{lem}
 \label{lem:gensymchain}
 The homology $H_*(\cms^c)$ has a graded basis given by the classes $[p,(\alpha_j),(u_i,v_i)]$
-associated to generalised symmetric chains.
+associated to generalised symmetric chains of weight $m$.
 % this basis is bijection with
 % the choices of the following set of data:
 % \begin{itemize}
@@ -385,7 +407,7 @@ associated to generalised symmetric chains.
 \begin{defn}
  \label{defn:dualHbasis}
 We can see the $\U_i$'s and $\V_i$'s as properly embedaded $1-$manifolds in $\mrS$;
-by Poincaré-Lefschetz duality they represent classes in $H_1\pa{(\mrS)^c}\simeq H^1(\S)$,
+by Poincaré-Lefschetz duality they represent classes in $\tH_1\pa{(\mrS)^c}\simeq H^1(\S)$,
 and in particular they form a basis
 of the latter cohomology group. We call $\u_i,\v_i\in H_1\pa{\mrS}$ the dual basis.
 
@@ -409,10 +431,9 @@ is associated with the monomial $\prod_{j=1}^{\infty}(Q^j\epsilon)^{\alpha_j}\ot
 
 This shows an isomorphism of bigraded $\Z_2-$vector spaces
 \begin{equation}\label{eq:isovectorspaces}
-  \bigoplus_{m\geq 0} H^*(\cms)\simeq \Z_2\left[Q^i\epsilon\,|\, i\geq 0\right]\otimes\Sym_{\bullet}(\H),
+  \bigoplus_{m\geq 0} H^*(\cms)\simeq \Z_2\left[Q^j\epsilon\,|\, j\geq 0\right]\otimes\Sym_{\bullet}(\H),
 \end{equation}
-
-and using the canonical identification of $\Z_2-$cohomology as the dual of homology, we can
-conclude that there exists an isomorphism as in theorem \ref{thm:Hbms*as*ggrep}
-at least \emph{as bigraded $\Z_2-$vector spaces}.
-
+from which we conclude that
+there exists an isomorphism as in theorem \ref{thm:Hbms*as*ggrep}
+at least \emph{as bigraded $\Z_2-$vector spaces}: the two bigraded
+vector spaces have the same dimension in all bidegrees.

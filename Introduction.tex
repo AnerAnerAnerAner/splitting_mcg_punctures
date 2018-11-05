@@ -3,11 +3,11 @@ Let $\sg$ be a smooth orientable surface of genus $g$ with one boundary componen
 a choice of $m$ distinct points in the interior, called \emph{punctures}.
 
 Let $\gg$ be the mapping class group of $\sg$, i.e. the group of isotopy classes of diffeomorphisms of $\sg$:
-diffeomorphisms are required to fix $\partial\sg$ pointwise; similarly let $\ggm$ be the mapping class group of $\sgm$, i.e.
+diffeomorphisms are required to fix $\partial\sg$ pointwise. Similarly let $\ggm$ be the mapping class group of $\sgm$, i.e.
 the group of isotopy classes of diffeomorphisms of $\sgm$ that fix $\partial\sgm$ pointwise and \emph{permute} the $m$ punctures.
 
-Forgetting punctures yields a surjective map $\ggm\to\gg$ with kernel $\bms$,
-the $m-$th \emph{braid group} of the surface $\sg$: we get the Birman exact sequence (see \cite{Birman:mcgbr}):
+Forgetting the punctures gives a surjective map $\ggm\to\gg$ with kernel $\bms$,
+the $m-$th \emph{braid group} of the surface $\sg$: we obtain the Birman exact sequence (see \cite{Birman:mcgbr}):
 \begin{equation}
 \label{eq:Birman}
 1\to\bms\to\ggm\to\gg\to 1.
@@ -27,21 +27,23 @@ the $m-$th \emph{braid group} of the surface $\sg$: we get the Birman exact sequ
 The associated Leray-Serre spectral sequence $E(m)$ in $\Z_2-$homology has a second page $E(m)^2_{k,q}=H_k(\gg;H_q(\bms;\Z_2))$,
 and converges to $H_{k+q}(\ggm;\Z_2)$.
 
-Our main theorem is that the spectral sequence has already collapsed in its second page.
+The main theorem of this article states that this spectral sequence has already collapsed in its second page.
 \begin{thm}
 \label{thm:main}
 For all $l\geq 0$ there is an isomorphism
 \begin{equation}
 \label{eq:main}
- H_l(\ggm;\Z_2)\cong \bigoplus_{k+q=l} H_k(\gg;H_q(\bms;\Z_2)).
+H_l(\ggm;\Z_2)\cong \bigoplus_{k+q=l} H_k(\gg;H_q(\bms;\Z_2)).
 \end{equation}
 \end{thm}
 Thus the computation of $H_*(\ggm;\Z_2)$ reduces to the computation of the homology of $\gg$ with
-twisted coefficients in the representation $H_*(\bms;\Z_2)$: as we will see the $\ggm-$representation
-$H_*(\bms;\Z_2)$ splits as a direct sum of symmetric powers of $H_1(\sg)$.
-In particular this representation is symplectic: this had already benn stated in \cite{LM}.
+twisted coefficients in the representation $H_*(\bms;\Z_2)$. We will see that the $\ggm-$representation
+$H_*(\bms;\Z_2)$ splits as a direct sum of symmetric powers of $H_1(\sg)$ with symplectic action
+(see theorem \ref{thm:Hbms*as*ggrep} in section \ref{sec:HBraidSurf}).
+
+%In particular this representation is symplectic: this had already benn stated in \cite{LM}.
 
 The group $\gg$ is significantly smaller than $\ggm$, so the
 computation of the right-hand side of equation \ref{eq:main}
-should be more tractable.
-WE DO THIS COMPUTATION FOR $g=1$.
+may be more tractable.
+%WE DO THIS COMPUTATION FOR $g=1$.

@@ -7,7 +7,7 @@
 \usepackage{hyperref}
 \usepackage{tikz-cd}
 
-
+\hyphenation{e-qui-va-riant se-cond ho-mo-lo-gy co-ho-mo-lo-gy}
 
 \theoremstyle{plain}
     \newtheorem{thm}{Theorem}[section]
@@ -45,8 +45,9 @@ Germany
 \begin{abstract}
 Let $\ggm$ be the mapping class group of an orientable surface $\sgm$ of genus $g$ with one parametrised
 boundary component and $m$ permutable punctures, and let $\bms$ be the braid group on $m$ strands
-of the surface $\sg$. We prove that $H_*(\ggm;\Z_2)\cong H_*(\gg;H_*(\bms;\Z_2))$.
-We compute (?) the right hand side explicitly for $g=1$.
+of the surface $\sg$. We prove that $H_*(\ggm;\Z_2)\cong H_*(\gg;H_*(\bms;\Z_2))$. The main ingredient
+is the identification of $H_*(\bms;\Z_2)$ as a symplectic representation of $\gg$.
+%We compute (?) the right hand side explicitly for $g=1$.
 \end{abstract}
 
 %\thanks{}
@@ -62,12 +63,12 @@ We compute (?) the right hand side explicitly for $g=1$.
 \input{Actiongg.tex}
 
 \input{Ssequence.tex}
-
-\input{GenusOne.tex}
-
+% 
+% \input{GenusOne.tex}
+% 
 \input{Rational.tex}
-
-\input{Conclusions.tex}
+% 
+% \input{Conclusions.tex}
 
 \bibliography{Bibliography.bib}{}
 \bibliographystyle{plain}

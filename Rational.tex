@@ -1,24 +1,27 @@
 \section{A rational counterexample}
 In this section we prove that a statement as in theorem \ref{thm:Hbms*as*ggrep}
-cannot hold if we consider homology with coefficients in $\Q$.
+cannot hold if we consider homology with coefficients in $\Q$. We still don't know
+if the analogue of theorem \ref{thm:main} holds in homology with coefficients in $\Q$
+or in fields of odd characteristic.
 
-We recall that $H_*(\cms;\Q)$ has been computed \emph{as a bigraded $\Q-$vector space}
-in \cite{BCM} and, more recently, in \cite{Knudson}; a description of it as a
+We recall that $H_*(C_m(\Sigma_{g,1});\Q)$ has been computed \emph{as a bigraded $\Q-$vector space}
+by B\"odigheimer, Cohen and Milgram in \cite{BCM}, and more recently by Knudson in \cite{Knudson}. A description of
+these homology groups as a
 $\gg-$representation seems to be still missing in the literature.
 
-In particular we prove the following fact.
+We will prove the following theorem:
 \begin{thm}
  \label{thm:counterexample}
- Let $g\geq 2$ and $m\geq 2$; then $H_2(C_2(\S);\Q)$ is not a symplectic
+ Let $g\geq 2$ and $m\geq 2$; then $H_2(C_2(\Sigma_{g,1});\Q)$ is not a symplectic
  representation of $\gg$.
 \end{thm}
 \begin{proof}
- We will use the following strategy:
+ Let again $\S=\Sigma_{g,1}$. We will use the following strategy:
  \begin{itemize}
   \item we define a homology class $[a]\in H_2(C_2(\S);\Q)$ represented by a cycle $a$;
   \item we prove that $[a]\neq 0$ by computing the algebraic intersection of
   $[a]$ with a homology class
-  in $\tH_2(\cms^c;\Q)$; here it is worth stressing that for all $m$ the manifold
+  in $\tH_2(\cms^c;\Q)$; here it is worth stressing that the manifold
   $\cms$ is orientable: therefore we can apply Poincaré-Lefschetz duality
   also with rational coefficients;
   \item we define another homology class $[b]\in H_2(\cms;\Q)$ and show that
@@ -37,24 +40,27 @@ We consider the torus $a=c\times c'$ of configurations in $C_2(\S)$ having one p
 one lying on $c'$: by abuse of notation, denote also one of its fundamental cycles by $a$
 (there are two possible choices, corresponding to the two possible orientations of $a$).
 
-Let $\tup=(0,(u_i,v_i))$ with $u_1=2$ and all other $u_i$'s, as well as all $v_i$'s, equal to zero;
-then the map
+Let $\tup=(0,(u_i,v_i))$ with $u_1=2$ and all other $u_i$'s, as well as all $v_i$'s, equal to zero.
+Then the map
 \[
 \phi_{\tup}\colon (\Delta^{\tup},\partial\Delta^{\tup})\to (C_2(\S)^c,\infty)
 \]
 maps the fundamental class in $H_2(\Delta^{\tup},\partial\Delta^{\tup};\Q)$ to a homology
-class in $H_2(C_2(\S);\Q)$; if we see $e^{\tup}$ as a properly embedded, orientable submanifold
-of $C_2(\S)$, then we are just considering its fundamental class $[e^{\tup}]\in H_2(C_2(\S)^c)$.
+class in $\tH_2(C_2(\S)^c;\Q)$.
+% ; if we see $e^{\tup}$ as a properly embedded, orientable submanifold
+% of $C_2(\S)$, then we are just considering its fundamental class $[e^{\tup}]\in H_2(C_2(\S)^c)$.
 
-The cell $e^{\tup}$ intersects once, transversely the torus $a$, therefore $[a]\cap[e^{\tup}]=\pm 1$,
+The cell $e^{\tup}$ intersects once, transversely the torus $a$, therefore the
+algebraic intersection $[a]\cap[e^{\tup}]$ is $\pm 1$,
 where the signs depends on how we have chosen orientations on $a$, $e^{\tup}$ and $C_2(\S)$ itself;
 in particular $[a]\neq 0$.
 
 The action of $\gg$ on isotopy classes of simple closed curves is transitive, so we can repeat
 the construction of the torus $a$ with any other copy of parallel, non-separating simple closed curves
-$c$ and $c'$, and the resulting class $[a]$ will always be non-zero in $H_2(C_2(\S);\Q)$.
+$c$ and $c'$, and the resulting class $[a]$ will always be non-trivial in $H_2(C_2(\S);\Q)$.
 
-Let now $d$ and $d'$ be disjoint, non-separating simple closed curves such that
+See figure \ref{fig:rational} to visualize the following discussion.
+Let $d$ and $d'$ be disjoint, non-separating simple closed curves such that
 cutting $\S$ along $d$ and $d'$ we obtain a subsurface $\S'\simeq\Sigma_{1,2}$ of genus 1, with boundary
 components $d$ and $d'$ (here we need that the genus of $\S$ is at least 2);
 suppose moreover that $c$ is a non-separating simple closed curve in $\S'$,
@@ -67,7 +73,12 @@ Orient all curves $d,d',c,c',c''$ in such a way that the following equalities ho
  \item $[c]=[c']=[c'']\in H_1(\S;\Q)$;
  \item $[d]-[d']+[c']-[c'']=0\in H_1(\S\setminus c;\Q)$, as witnessed by the subsurface $\S''$.
 \end{itemize}
-See picture PICTURE.
+
+\begin{figure}\centering
+ \includegraphics[scale=1.0]{figures/rational.png}
+ \caption{The curves $d,d',c,c',c'',\gamma,\gamma''$ and the subsurfaces $\S',\S''$.}
+\label{fig:rational}
+\end{figure}
 
 The four tori $c\times c'$, $c\times c''$, $c\times d$ and $c\times d'$ are contained in $C_2(\S)$
 and the equality
@@ -84,6 +95,13 @@ Let again $a=[c\times c']$ and let $b=[c\times d]$: then the class $b'=[c\times 
 is equal to $b+2a\in H_2(C_2(\S);\Q)$.
 
 Consider now an element of the Torelli group that fixes $c$ and maps $d$ to $d'$ preserving
-the orientation, for example the bounding pair represented in picture PICTURE:
+the orientation, for example the bounding pair $D_{\gamma}\circ D_{\gamma'}^{-1}$, where
+$\gamma$ and $\gamma'$ are represented in figure \ref{fig:rational}:
 then the class $b$ is mapped to $b'=b+2a\neq b$.
 \end{proof}
+
+The previous proof works word by word if we replace $\Q$ by any field of odd characteristic. Moreover
+all the arguments in the previous proof can be adapted to show that $H_*(F_2(\S);\mathbb{F})$ is
+not a symplectic representation of $\gg$, where $F_2(\S)$ is the ordered configuration space
+and $\mathbb{F}$ is \emph{any} field, including $\Z_2$. The result of theorem \ref{thm:Hbms*as*ggrep}
+is peculiar of unordered configurations and characteristic 2.
