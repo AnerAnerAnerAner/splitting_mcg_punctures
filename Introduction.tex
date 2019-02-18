@@ -7,7 +7,7 @@ diffeomorphisms are required to fix $\partial\sg$ pointwise. Similarly let $\ggm
 the group of isotopy classes of diffeomorphisms of $\sgm$ that fix $\partial\sgm$ pointwise and \emph{permute} the $m$ punctures.
 
 Forgetting the punctures gives a surjective map $\ggm\to\gg$ with kernel $\bms$,
-the $m-$th \emph{braid group} of the surface $\sg$: we obtain the Birman exact sequence (see \cite{Birman:mcgbr}):
+the $m$-th \emph{braid group} of the surface $\sg$. We obtain the Birman exact sequence (see \cite{Birman:mcgbr})
 \begin{equation}
 \label{eq:Birman}
 1\to\bms\to\ggm\to\gg\to 1.
@@ -24,26 +24,33 @@ the $m-$th \emph{braid group} of the surface $\sg$: we obtain the Birman exact s
 % action of the symmetric group $\S_m$ that permutes the (ordered list of) points in the configuration; $\mg$ and $\mgm$
 % are the moduli spaces of Riemann structures on $\sg$ and $\sgm$ respectively.
 
-The associated Leray-Serre spectral sequence $E(m)$ in $\Z_2-$homology has a second page $E(m)^2_{k,q}=H_k(\gg;H_q(\bms;\Z_2))$,
+The associated Leray-Serre spectral sequence $E(m)$ in $\Z_2$-homology has a second page $E(m)^2_{k,q}=H_k(\gg;H_q(\bms;\Z_2))$,
 and converges to $H_{k+q}(\ggm;\Z_2)$.
 
-The main theorem of this article states that this spectral sequence has already collapsed in its second page.
+The main result of this article is that this spectral sequence collapses in its second page.
 \begin{thm}
 \label{thm:main}
 For all $l\geq 0$ there is an isomorphism
 \begin{equation}
 \label{eq:main}
-H_l(\ggm;\Z_2)\cong \bigoplus_{k+q=l} H_k(\gg;H_q(\bms;\Z_2)).
+H_l\pa{\ggm;\Z_2}\cong \bigoplus_{k+q=l} H_k\pa{\gg;H_q\pa{\bms;\Z_2}}.
 \end{equation}
 \end{thm}
-Thus the computation of $H_*(\ggm;\Z_2)$ reduces to the computation of the homology of $\gg$ with
-twisted coefficients in the representation $H_*(\bms;\Z_2)$. We will see that the $\ggm-$representation
-$H_*(\bms;\Z_2)$ splits as a direct sum of symmetric powers of $H_1(\sg)$ with symplectic action
-(see theorem \ref{thm:Hbms*as*ggrep} in section \ref{sec:HBraidSurf}).
+Thus the computation of $H_*\pa{\ggm;\Z_2}$ reduces to the computation of the homology of $\gg$ with
+twisted coefficients in the representation $H_*\pa{\bms;\Z_2}$. We will see that this $\ggm$-representation
+splits as a direct sum of symmetric powers of $H_1(\sg)$ with the symplectic action
+(see Theorem \ref{thm:Hbms*as*ggrep}).
+% in section \ref{sec:HBraidSurf}).
 
 %In particular this representation is symplectic: this had already benn stated in \cite{LM}.
 
-The group $\gg$ is significantly smaller than $\ggm$, so the
-computation of the right-hand side of equation \ref{eq:main}
-may be more tractable.
+% The group $\gg$ is significantly smaller than $\ggm$, so the
+% computation of the right-hand side of equation \eqref{eq:main}
+% may be more tractable.
 %WE DO THIS COMPUTATION FOR $g=1$.
+
+The strategy of the proof does not generalize to fields of characteristic different from 2 or to the \emph{pure}
+mapping class group, in which we consider only diffeomorphisms of $\sgm$ that fix all punctures. In section \ref{sec:rational}
+we describe in detail a counterexample with coefficients in $\Q$, which can be generalized both to coefficients
+in a field $\F_p$ of odd characteristic and to the pure mapping class group.
+
