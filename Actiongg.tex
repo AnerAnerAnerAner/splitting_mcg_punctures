@@ -1,7 +1,12 @@
 \section{Action of $\gg$}
 \label{sec:Actiongg}
-We now turn back to \emph{homology} of $\cms$; we will first prove the full statement of Theorem
-\ref{thm:Hbms*as*ggrep} in bigradings $(*,m)$ with $*=m$, and then extend it to other bigradings.
+We now turn back to \emph{homology} of $\cms$. In the first subsection we describe geometrically some
+homology classes, in order to give some intuition for the following subsections.
+In the second subsection we prove Theorem
+\ref{thm:Hbms*as*ggrep} in bigradings $(*,m)$ with $*=m$.
+In the third subsection we extend the proof to all other bigradings.
+
+\input{simpleexample.tex}
 
 \subsection{Bigradings of the form $(m,m)$}
 In this subsection we construct a $\gg$-~equivariant isomorphism 
@@ -59,7 +64,7 @@ images. Here and in the following $\Sone$ is the unit circle in $\C$.
 Two $m$-tuples of curves are isotopic if there is an ambient isotopy of $\S$ relative to $\partial\S\cup\D$
 transforming one $m$-tuple into the other. In particular $\cC^m$ is more than countable.
 
-We call \emph{multicurve} an element of $\cC^m$; by abuse of notation
+An element of $\cC^m$ is called \emph{multicurve}; by abuse of notation the $m$-tuple
 $(c_1,\dots,c_m)$ will often represent its class in $\cC^m$, i.e. the corresponding multicurve.
 See picture \ref{fig:defcCm}
 % For each isotopy class we
@@ -100,7 +105,7 @@ on $\Sym_m(\H)$, symplectically. The map $\pr_m$ is $\gg$-equivariant.
 % For the second property we need a definition
 \begin{defn}
  \label{defn:cmsD}
- Recall Definition \ref{defn:symprod}.
+ Recall Definition \ref{defn:SP}.
  The space $\cmsD$ is the subspace of $\SP^m(\mrS)$ of configurations where all points
  having multiplicity $\geq 2$ lie inside $D$.
  See Figure \ref{fig:defcmsD}.
@@ -119,7 +124,7 @@ on $\Sym_m(\H)$, symplectically. The map $\pr_m$ is $\gg$-equivariant.
 has image in the subspace $\cmsD$; we define $\j_m(c_1,\dots,c_m)$ as the image
 of the fundamental class
 of the $m$-fold torus in $H_m(\cmsD)$. The result does not change
-if we substitute $(c_1,\dots,c_m)$ with another isotopic $m$-tuple of curvesin the same multicurve.
+if we substitute $(c_1,\dots,c_m)$ with another isotopic $m$-tuple of curves in the same multicurve.
 
 We call $[c_1]\cdot\ldots\cdot[c_m]$ the image in the singular chain complex of $\cmsD$ of
 the fundamental cycle of the
@@ -379,9 +384,10 @@ By Poincaré Lefschetz duality $\tH_m(\cms^{\infty})\simeq H^m(\cms)$, and the l
 the dual of $H_m(\cms)$.
 
 We can therefore associate to $[\kappa(\uu,\uv)]$ a linear functional
-on $H_m(\cms)$, which is the intersection product
+on $H_m(\cms)$. This is the algebraic intersection product with the cell $e^{\tup}$, seen as a proper submanifold of $\cms$:
+we denote it by
 \[
- (\cdot\cap e^{\tup})\colon H_m(\cms)\to\Z_2.
+ \cdot\cap e^{\tup}\colon H_m(\cms)\to\Z_2.
 \]
 Therefore
 \[
