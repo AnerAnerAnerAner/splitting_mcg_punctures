@@ -1,0 +1,71 @@
+\section{Comparison with the work of B\"{o}digheimer and Tillmann}
+\label{sec:comparison}
+In this section we will compare Theorems \ref{thm:main} and \ref{thm:Hbms*as*ggrep}
+with the results in \cite{BoT}, in particular the following two theorems.
+\begin{thm}[Corollary 1.2 in \cite{BoT}]
+Let $\F$ be a field, and let $m\geq 0$, $g\geq 0$. Then the following graded $\F$-vector spaces are isomorphic in degrees $*\leq \frac 23 g-\frac 23$:
+\[
+ H_*\pa{\ggm;\F}\cong H_*\pa{\gg;\F}\otimes_{\F} H_*\pa{\mathfrak{S}_m;\F[x_1,\dots,x_m]};
+\]
+here each $x_1,\dots,x_m$ have degree 2 and the symmetric group $\mathfrak{S}_m$ acts on the polynomial
+ring $\F[x_1,\dots,x_m]$ by permuting the variables.
+\end{thm}
+We point out that the range of degrees $*\leq \frac 23 g-\frac 23$ is the stable range for the homology $H_*(\gg;\F)$
+of the mapping class group, see \cite{Harer} for the original stability theorem and \cite{Boldsen, ORW:resolutions_homstab} for the improved
+stability range.
+\begin{thm}[Theorem 1.3 in \cite{BoT}]
+For all $m\geq 0$ the map $\mu^{\cF}\colon C_1(\D)\times C_m(\cF_{\S'})\to C_{m+1}(\cF_{\S,\D})$ from Definition \ref{defn:muF}
+induces a split-injective map in homology
+\[
+ \mu^{\cF}_*\colon H_*\pa{C_m(\cF_{\S'})}\cong H_0\pa{C_1(\D)}\otimes_{\F} H_*\pa{C_m(\cF_{\S'})}\hookrightarrow H_*\pa{C_{m+1}(\cF_{\S,\D})};
+\]
+in other words, the inclusion of groups $\ggm\hookrightarrow\gg^{m+1}$ given by adding a puncture near the boundary induces a split
+injective map $H_*(\ggm;\F)\hookrightarrow H_*(\gg^{m+1};\F)$.
+\end{thm}
+\subsection{Reformulation of our results}
+\label{subsec:reformulation}
+In this subsection we reformulate Theorems \ref{thm:main} and \ref{thm:Hbms*as*ggrep} in a convenient way.
+\begin{defn}
+ \label{defn:Cbullet}
+ We introduce some abbreviations for the following disjoint unions:
+ \[
+ C_{\bullet}(\D)=\coprod_{m\geq 0}C_m(\D);
+ \]
+ \[
+ C_{\bullet}(\S)=\coprod_{m\geq 0}C_m(\S); 
+ \]
+ \[
+ C_{\bullet}(\cF_{\S,\D})=\coprod_{m\geq 0}C_m(\cF_{\S,\D}).
+ \]
+\end{defn}
+Then $C_{\bullet}(\D)$ is a (homotopy associative) topological monoid, with associated
+Pontryiagin ring $H_*\pa{C_{\bullet}(\D)}\cong\Z_2[Q^j\epsilon|j\geq 0]$ (see Equation \ref{eq:Cohen}).
+This is a bigraded ring, where the two gradings are the homological degree and the weight.
+
+The maps $\mu$ from Definition \ref{defn:muF} make $C_{\bullet}(\S)$ into a (homotopy associative)
+module over the monoid $C_{\bullet}(\D)$; correspondingly $H_*\pa{C_{\bullet}(\S)}$ is a bigraded
+module over $H_*\pa{C_{\bullet}(\D)}$. The structure of this module is described by the following
+reformulation of Theorem \ref{thm:Hbms*as*ggrep}, see in particular the proof of Lemma \ref{lem:oplussplitting}.
+
+\begin{thm}
+ \label{thm:firstreformulation}
+ There is an isomorphism of $\gg$-representations in (bigraded) modules over the ring $H_*\pa{C_{\bullet}(\D)}$
+ \[
+  H_*\pa{C_{\bullet}(\S)}\cong   H_*\pa{C_{\bullet}(\D)}\otimes_{\Z_2}\Sym_{\bullet}(\H).
+ \]
+\end{thm}
+
+Similarly, Theorem \ref{thm:main} can be reformulated as follows, considering at the same time all values of $m\geq 0$.
+\begin{thm}
+ \label{thm:mainreformulation}
+ There is an isomorphism of (bigraded) modules over $H_*\pa{C_{\bullet}(\D)}$
+ \[
+ H_*\pa{C_{\bullet}(\cF_{\S,\D})}\cong   H_*\pa{C_{\bullet}(\D)}\otimes_{\Z_2}H_*\pa{\gg;\Sym_{\bullet}(\H)}.
+ \] 
+\end{thm}
+The proof follows from the arguments used in Section \ref{sec:sseq}: we have actually shown that the direct
+sum of the spectral sequences $\bigoplus_{m\geq 0} E(m)$ is itself a free module over $H_*\pa{C_{\bullet}(\D)}$
+on the second page, with the same description as above.
+
+\subsection{Comparison between results}
+\label{subsec:comparison}

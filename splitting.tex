@@ -21,6 +21,7 @@
 \theoremstyle{definition}
     \newtheorem{defn}[thm]  {Definition}
     \newtheorem{conj}[thm]{Conjecture}
+    \newtheorem{ex}{Example}
 
 \input{macros.tex}
     
@@ -42,21 +43,41 @@ Germany
 
 \date{\today}
 
+\keywords{Mapping class group, braid group, symplectic coefficients.}
+\subjclass[2010]{20F36, %Braid groups; Artin groups
+55N25, %Homology with local coefficients, equivariant cohomology
+55R20, %Spectral sequences and homology of fiber spaces 
+55R35, %Classifying spaces of groups and $H$-spaces
+55R40, %Homology of classifying spaces, characteristic classes
+55R80, %Discriminantal varieties, configuration spaces
+55T10, %Serre spectral sequences
+}
 
-%\keywords{Topological complexity, aspherical spaces, Lusternik-Schnirelmann category, cohomological dimension, topological robotics, braid groups}
-%\subjclass[2010]{55M99, 55P20 (Primary); 55M30, 20J06, 68T40 (Secondary).}
+
 
 \begin{abstract}
-Let $\ggm$ be the mapping class group of an orientable surface $\sgm$ of genus $g$ with one parametrised
-boundary component and $m$ permutable punctures, and let $\bms$ be the braid group on $m$ strands
-of the surface $\sg$. We prove that $H_*(\ggm;\Z_2)\cong H_*(\gg;H_*(\bms;\Z_2))$. The main ingredient
-is the identification of $H_*(\bms;\Z_2)$ as a symplectic representation of $\gg$.
+Let $\Gamma_{g,1}^m$ be the mapping class group of the orientable surface $\Sigma_{g,1}^m$ of genus $g$ with one parametrised
+boundary curve and $m$ permutable punctures; when $m=0$ we omit it from the notation.
+Let $\beta_{m}(\Sigma_{g,1})$ be the braid group on $m$ strands
+of the surface $\Sigma_{g,1}$.
+
+\noindent We prove that $H_*(\Gamma_{g,1}^m;\mathbb{Z}_2)\cong H_*(\Gamma_{g,1};H_*(\beta_{m}(\Sigma_{g,1});\mathbb{Z}_2))$. The main ingredient
+is the computation of $H_*(\beta_{m}(\Sigma_{g,1});\mathbb{Z}_2)$ as a symplectic representation of $\Gamma_{g,1}$.
 %We compute (?) the right hand side explicitly for $g=1$.
+
+% 
+% Let $\Gamma^m_{g,1}$ be the mapping class group of an orientable surface $\Sigma^m_{g,1}$ of genus $g$ with one parametrised
+% boundary curve and $m$ permutable punctures, and let $\beta_m(\Sigma_{g,1})$ be the braid group on $m$ strands
+% of the surface $\Sigma_{g,1}$ of genus $g$ with one boundary curve.
+% 
+% We prove that $H_*(\Gamma^m_{g,1};\mathbb{Z}_2)\cong H_*(\Gamma_{g,1};H_*(\beta_m(\Sigma_{g,1});\mathbb{Z}_2))$. The main ingredient
+% is the computation of $H_*(\beta_m(\Sigma_{g,1});\mathbb{Z}_2)$ as a symplectic representation of $\Gamma_{g,1}$.
 \end{abstract}
 
 %\thanks{}
 
 \maketitle
+THIS VERSION IS NOT ANYMORE UP TO DATE! SEE ARXIVE VERSION
 
 \input{Introduction.tex}
 
@@ -67,12 +88,10 @@ is the identification of $H_*(\bms;\Z_2)$ as a symplectic representation of $\gg
 \input{Actiongg.tex}
 
 \input{Ssequence.tex}
-% 
-% \input{GenusOne.tex}
-% 
-\input{Rational.tex}
 
-\input{Conclusions.tex}
+\input{Comparison.tex}
+ 
+% \input{Rational.tex}
 
 \bibliography{Bibliography.bib}{}
 \bibliographystyle{plain}
