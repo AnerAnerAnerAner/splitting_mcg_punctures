@@ -66,28 +66,12 @@ is isomorphic, as a bigraded $\gg$-representation over $\mathbb{F}$, to the tens
 of the ring $\mathbb{F}[\epsilon]$, with trivial action, and some other bigraded representation:
 here $\epsilon$ denotes, in analogy with the notation of Theorem \ref{thm:Hbms*as*ggrep}, the standard generator of $H_0(C_1(\D))$.
 
-% isomorphism of bigraded vector spaces
-% \begin{equation}
-% \label{eq:genuszero}
-% \bigoplus_{m\geq 0} H_*\pa{C_m(\D)}\simeq \Z_2[Q^j\epsilon\,|\, j\geq 0].
-% \end{equation}
-% This isomorphism was essentially proved by Fuchs in \ref{Fuchs:CohomBraidModtwo}. Moreover the left hand
-% side is the homology of the space $\coprod_{m\geq 0} C_m(\D)$, which has a natural structure
-% of algebra over the operad $E^2$ of little $2$-cubes. The isomorphism in equation \eqref{eq:genuszero}
-% is an isomorphism of rings (using the Pontryagin product on the left hand side), and $Q$ represents here
-% the Araki-Kudo-Dyer-Lashof operation $Q\colon H_*(X;\Z_2)\to H_{2*+1;\Z_2}(X)$,
-% which is defined for any $E^2$-algebra $X$; $\epsilon\in H_0(C_1(\D))$ is the generator.
-% This explains our notation; we refer to Cohen \cite[Chap.3]{CLM} for more details.
-
 In this section we will prove that there is an isomorphism of \emph{bigraded $\Z_2$-vector spaces}
 as in Theorem \ref{thm:Hbms*as*ggrep}; in the next section we will deal with the action of
 $\gg$.
-%In these two sections we abbreviate $\S=\sg$.
 
 Since we work with coefficients in a field, it is equivalent to compute homology or cohomology,
 and in this section we will prefer to compute $H^*(\cms)$ for all bigradings $(*,m)$.
-% the dual graded vector space $H_*(\cms)$ is abstractly isomorphic,
-% i.e. it has the same dimension.
 
 We will mimic the method used by Fuchs \cite{Fuchs:CohomBraidModtwo} to compute the $\Z_2$-cohomology
 of $C_m(\D)$.
@@ -151,7 +135,7 @@ space of configurations of $m$ points in $\T(\S)$.
 \end{defn}
 
 \begin{figure}\centering
- \includegraphics[scale=0.7]{figures/defTS.pdf}
+ \includegraphics[scale=0.7]{defTS.pdf}
  \caption{The space $Q(\S)$ for $\S=\Sigma_{3,1}$. The black pentagons represent the point $\cP_{even}$, whereas the black
  squares represent $\cP_{odd}$.}
 \label{fig:defTS}
@@ -173,11 +157,6 @@ satisfying the following equality
 \[
  m=\sum_{i=1}^lx_i+\sum_{i=1}^g(u_i+v_i).
 \]
-% We will generically use the letter $m$ to denote any of the numbers $l$, $x_i$,$y_i$,$z$,$u_i$,$v_i$ or $w_i$
-% in the above sum, so $m\in\Z$; instead .
-% Similarly we will use the letter $\M$ to denote any of the intervals $\U_i,\V_i,\W_i$;
-% they will correspond to the letters $U_i,V_i,W_i$, so we also define a subset
-% $\bsymb=\set{(U_i,V_i)_{i\leq g},(W_i)_{i\leq n-1}}\subset\symb$.
 In symbols we write $\tup=(l,\ux,\uu,\uv)$. We omit from the notation $\ux$ if it vanishes: this happens precisely when $l=0$.
 The \emph{dimension} of $\tup$ is defined as $m+l$.
 
@@ -196,7 +175,7 @@ of $\cms$ of configurations of $m$ points in $\mrS$ such that the following cond
 
 
 \begin{figure}\centering
- \includegraphics[scale=0.7]{figures/defetup.pdf}
+ \includegraphics[scale=0.7]{defetup.pdf}
  \caption{A configuration in the subspace $e^{\tup}\subset C_{14}(\S)$, for the tuple $\tup=(3,(3,1,2),(1,2,0),(0,3,2))$. Points
  lying on the $\U_i$'s and the $\V_i$'s are depicted twice.}
 \label{fig:defetup}
@@ -205,12 +184,9 @@ of $\cms$ of configurations of $m$ points in $\mrS$ such that the following cond
 
 The space $e^{\tup}$ is homeomorphic to \emph{the interior} of the following multisimplex:
 
-% We want to show that the collection of the $e_h$ for varying $h$, together with
-% the 0-cell $*$, give a cell decomposition of $C_k(\S)^{\infty}$. Denote by $\Delta^h$ the following product of simplices
 \[
  \Delta^{\tup}\colon =
  \Delta^l\times\prod_{i=1}^l\Delta^{x_i}\times\prod_{i=1}^g\pa{\Delta^{u_i}\times\Delta^{v_i}},
-%  =\prod_{m\in\symb_l}\Delta^m.
 \]
 where the simplex $\Delta^r$ is the subspace of $[0,1]^r$ of sequences $0\leq \tau_1\leq\dots\leq\tau_r\leq 1$
 (the numbers $\tau_1,\dots,\tau_r$ are the \emph{local coordinates} of the simplex). The homeomorphism is given
@@ -264,9 +240,9 @@ Then $[\tup:\tup']=0$ unless one, and exactly one, of the following situations o
  $x'_j=x_{j+1}$ for $i+1\leq j\leq l-1$. In this case we say that $\tup'$ is an \emph{inner boundary} of $\tup$, and
  we have
  \[
-  [\partial \tup\colon\tup']=\binom{x_i+x_{i+1}}{x_i}\in\Z_2.
+  [\partial \tup\colon\tup']=\binom{x_i+x_{i+1}}{x_i}\in\Z_2,
  \]
-%  This binomial coefficient may be anyway equal to $0\in\Z_2$.
+ where $\binom{x_i+x_{i+1}}{x_i}$ denotes the binomial coefficient.
  \item $l\geq 1$ and $\tup'$ is obtained from $\tup$ by decreasing $l$ by 1, choosing a splitting of $x_1$
  in integers $\tildeu_i,\tildev_i\geq 0$
  \[
@@ -277,7 +253,6 @@ Then $[\tup:\tup']=0$ unless one, and exactly one, of the following situations o
  \[
   [\partial \tup\colon\tup']=\prod_{i=1}^g\binom{u_i+\tildeu_i}{u_i}\binom{v_i+\tildev_i}{v_i}\in\Z_2.
  \]
-%  This product of binomial coefficients may be anyway equal to $0\in\Z_2$.
  \item $l\geq 1$ and $\tup'$ is obtained from $\tup$ by decreasing $l$ by 1, choosing a splitting of $x_l$
  in integers $\tildeu_i,\tildev_i\geq 0$
  \[
@@ -288,7 +263,6 @@ Then $[\tup:\tup']=0$ unless one, and exactly one, of the following situations o
  \[
   [\partial \tup\colon\tup']=\prod_{i=1}^g\binom{u_i+\tildeu_i}{u_i}\binom{v_i+\tildev_i}{v_i}\in\Z_2.
  \]
-%  This product of binomial coefficients may be anyway equal to $0\in\Z_2$.
 \end{itemize}
 
 \end{lem}
@@ -326,8 +300,6 @@ so that $[\tup\colon\tup']=0$ as stated.
  and $\partial_j^{\hor}\Delta^{\tup}$ is the one described in the remark preceding this proof: in this case
  there are two equal contributions $[\partial_i^{\hor}\tup\colon\tup']$ and $[\partial_j^{\hor}\tup\colon\tup']$
  that cancel each other.
-%  We are working in $\Z_2$ so we do not have to be careful about orientations of cells
-%  and therefore about signs.
 \end{proof}
 
 We can filter the reduced chain complex $\tilde\Ch_*(\cms^{\infty})$ by giving filtration norm $\sum_{i=1}^lx_i$ to
@@ -355,7 +327,7 @@ degrees by $p$.
 
 We note that $\tCh_*(C_p(\Sigma_{0,1})^{\infty})$ is exactly the chain complex described by Fuchs in
 \cite{Fuchs:CohomBraidModtwo}: we recall Fuchs' computation of the cohomology of configuration
-spaces of the disc, and abbreviate $\D$ for $\mathring{\Sigma}_{0,1}$ as in Section \ref{sec:Preliminaries}.
+spaces of the disc, and abbreviate $\D$ for $\mathring{Sigma}_{0,1}$ as in Section \ref{sec:Preliminaries}.
 \begin{defn}
 \label{defn:symchain}
 Consider a partition of $p$ into powers of 2
@@ -372,7 +344,6 @@ is the sum of all tuples $\tup=\pa{l,(x_i)_{i\leq l}}$ such that
  \item every $x_i$ is a power of 2;
  \item for all $j\geq 0$ there are exactly $\alpha_j$ indices $i$ such that $x_i=2^j$.
 \end{itemize}
-% Here and in the following it is understood that $\alpha_j=0$ for all but finitely many indices $j$.
 A symmetric chain $\kappa(\ualpha)$ is a cycle in the chain complex $\tCh_*(C_p(\D)^{\infty})$ (see \cite{Fuchs:CohomBraidModtwo}).
 We denote by $[\kappa(\ualpha)]\in\tH_{p+l}(C_p(\D)^{\infty})$ the associated homology class.
 \end{defn}
@@ -391,11 +362,6 @@ of weight $p$, using
 the isomorphism \eqref{eq:Cohen} in its full meaning (i.e. as an isomorphism of rings,
 where $Q$ denotes the first Dyer-Lashof operation).
 
-% This notation is compatible, after interpreting equation \eqref{eq:genuszero} as an isomorphism
-% of rings, with the results of \cite[Chap.3]{CLM}: the monomials constructed there, using
-% the Pontryagin product and the operation $Q$, are really the dual basis of the basis of
-% symmetric chains for cohomology.
-
 We will not need this finer result in this article, so in the following the expression
 $Q^{\ualpha}$ will only denote
 the (unique) homology class in $H_{p-l}(C_p(\D)$ such that the following holds:
@@ -403,8 +369,6 @@ for all $\ualpha'=(\alpha'_j)_{j\geq 0}$ with $\sum_{j\geq 0}\alpha'_j=p$, the
 algebraic intersection between $Q^{\ualpha}\epsilon\in H_{p-l}(C_p(\D))$
 and $[\kappa(\ualpha')]\in\tH_{p+l}(C_p(\D)^{\infty})$
 is $1\in\Z_2$ if and only $\ualpha=\ualpha'$.
-% i.e. we \emph{define} monomials as the dual basis of the basis of symmetric chains, and keep considering
-% \eqref{eq:Cohen} only as an isomorphism of bigraded vector spaces.
 
 We now go back to the filtered chain complex $\tCh_*(\cms^{\infty})$.
 The $E^1$-page of the associated Leray spectral sequence contains on the $p$-th column
@@ -455,27 +419,12 @@ $x_i$ happen to be equal, then $\tup=\tup'$ and
 we are in the situation described before the proof of Lemma \ref{lem:doperatoropenmodtwo}.
 
 The spectral sequence considered above collapses on its first page and
-% $H_*(\cms^{\infty})$
-% has a $\Z_2$-basis given by generalised symmetric chains.
 we have the following lemma:
 \begin{lem}
 \label{lem:gensymchain}
 The homology $H_*(\cms^{\infty})$ has a graded basis given by the classes $[\kappa(p,\ualpha,\uu,\uv)]$
 associated to generalised symmetric chains of weight $m$.
-% this basis is bijection with
-% the choices of the following set of data:
-% \begin{itemize}
-%  \item a number $0\leq p\leq m$;
-%  \item a splitting $m-p=\sum_{i=1}^g (u_i+v_i)$ with $u_i,v_i\geq 0$;
-%  \item a splitting $p=\sum_{j=0}^{\infty}\alpha_j2^j$ with $\alpha_j\geq 0$.
-% \end{itemize}
-% The homology class $[p,(u_i,v_i),(\alpha_j)]\in H_*(\cms^{\infty})$ has homological degree
-% $m+\sum_{j=1}^{\infty}\alpha_j$.
 \end{lem}
-% To interpret this class
-% as a monomial in the tensor product of Theorem \ref{thm:Hbms*as*ggrep} we need the following definition.
-
-% We are almost ready to prove an isomorphism of bigraded $\Z_2$-vector spaces as in Theorem \ref{thm:Hbms*as*ggrep}.
 
 \begin{defn}
  \label{defn:dualHbasis}
@@ -483,16 +432,6 @@ We can see the $\U_i$'s and $\V_i$'s as properly embedded $1$-manifolds in $\mrS
 by Poincaré-Lefschetz duality they represent classes in $\tH_1\pa{(\mrS)^{\infty}}\simeq H^1(\S)$,
 and in particular they form a basis
 of the latter cohomology group. We call $\u_i,\v_i\in H_1\pa{\mrS}$ the dual basis.
-
-% We fix simple closed curves $\u_i,\v_i$ on $\S$, for $1\leq i\leq g$, whose fundamental classes
-% $[\u_i],[\v_i]$ form the dual basis of $H_1(\S)$. We assume that, apart from the following necessary exceptions,
-% all curves $\U_i,\V_i,\u_i,\v_i$ for $1\leq i\leq g$ are disjoint:
-% \begin{itemize}
-%  \item $\u_i$ and $\v_i$ intersect once, transversely;
-%  \item $\u_i$ and $\U_i$ intersect once, transversely;
-%  \item $\v_i$ and $\V_i$ intersect once, transversely;
-%  \end{itemize}
-% SEE PICTURE.
 \end{defn}
 We establish a bijection between monomials in the tensor product of Theorem \ref{thm:Hbms*as*ggrep}
 and the basis of $H^*(\cms)\simeq H_*(\cms^{\infty})$ in Lemma \ref{lem:gensymchain}:

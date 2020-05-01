@@ -1,0 +1,39 @@
+\section{Introduction}
+Let $\sg$ be a smooth orientable surface of genus $g$ with one boundary curve $\partial\sg$, and let $\sgm$ be $\sg$ with
+a choice of $m$ distinct points in the interior, called \emph{punctures}.
+
+Let $\gg$ be the mapping class group of $\sg$, i.e. the group of isotopy classes of diffeomorphisms of $\sg$:
+diffeomorphisms are required to fix $\partial\sg$ pointwise. Similarly let $\ggm$ be the mapping class group of $\sgm$, i.e.
+the group of isotopy classes of diffeomorphisms of $\sgm$ that fix $\partial\sgm$ pointwise and \emph{permute} the $m$ punctures.
+
+Forgetting the punctures gives a surjective map $\ggm\to\gg$ with kernel $\bms$,
+the $m$-th \emph{braid group} of the surface $\sg$. We obtain the Birman exact sequence (see \cite{Birman:mcgbr})
+\begin{equation}
+\label{eq:Birman}
+1\to\bms\to\ggm\to\gg\to 1.
+\end{equation}
+
+The associated Leray-Serre spectral sequence $E(m)$ in $\Z_2$-homology has a second page $E(m)^2_{k,q}=H_k(\gg;H_q(\bms;\Z_2))$,
+and converges to $H_{k+q}(\ggm;\Z_2)$.
+
+The main result of this article is that this spectral sequence collapses in its second page.
+\begin{thm}
+\label{thm:main}
+For all $l\geq 0$ there is an isomorphism of vector spaces
+\begin{equation}
+\label{eq:main}
+H_l\pa{\ggm;\Z_2}\cong \bigoplus_{k+q=l} H_k\pa{\gg;H_q\pa{\bms;\Z_2}}.
+\end{equation}
+\end{thm}
+Thus the computation of $H_*\pa{\ggm;\Z_2}$ reduces to the computation of the homology of $\gg$ with
+twisted coefficients in the representation $H_*\pa{\bms;\Z_2}$. We will see that this $\gg$-representation
+splits as a direct sum of symmetric powers of $H_1(\sg)$ with the symplectic action: this is done in
+Theorem \ref{thm:Hbms*as*ggrep}, which together with Theorem \ref{thm:main} is the main result of the article.
+
+The strategy of the proof does not generalize to fields of characteristic different from 2 or to the \emph{pure}
+mapping class group, in which we consider only diffeomorphisms of $\sgm$ that fix all punctures. In Section \ref{sec:rational}
+we describe in detail a counterexample with coefficients in $\Q$, which can be generalized both to coefficients
+in a field $\F_p$ of odd characteristic and to the pure mapping class group.
+
+I would like to thank my PhD advisor Carl-Friedrich B\"odigheimer for his precious suggestions and his continuous encouragement
+during the preparation of this work.

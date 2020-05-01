@@ -1,0 +1,87 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd,mathrsfs,mathtools}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage[a4article]{geometry}
+    
+\newcommand{\N}{\mathbb{N}}    
+\newcommand{\C}{\mathbb{C}}
+% \newcommand{\cC}{\mathcal{C}}
+% \newcommand{\D}{\mathbb{D}}
+% \newcommand{\F}{\mathbb{F}}
+% \newcommand{\cF}{\mathcal{F}}
+% \newcommand{\cK}{\mathcal{K}}
+% \newcommand{\ff}{\mathfrak{f}}
+\newcommand{\fM}{\mathfrak{M}}
+% \newcommand{\Q}{\mathbb{Q}}
+% \newcommand{\R}{\mathbb{R}}
+% \renewcommand{\H}{\mathcal{H}}
+% \newcommand{\fH}{\mathfrak{H}}
+% \newcommand{\V}{\mathcal{V}}
+% \newcommand{\Z}{\mathbb{Z}}
+% \newcommand{\cS}{\mathcal{S}}
+% \newcommand{\bS}{\mathbb{S}}
+\newcommand{\fS}{\mathfrak{S}}
+% \newcommand{\T}{\mathcal{T}}
+
+% \newcommand{\pa}[1]{\left(#1\right)}
+% \newcommand{\abs}[1]{\left|#1\right|}
+% \newcommand{\set}[1]{\left\{#1\right\}}
+
+
+\renewcommand{\phi}{\varphi}
+    
+\hyphenation{sta-bi-li-ty}
+
+
+\begin{document}
+\title{
+Answer to the referee report for ``Splitting of the homology of the
+punctured mapping class group''
+}
+\author{Andrea Bianchi}
+\address{Mathematics Institute,
+University of Bonn,
+Endenicher Allee 60, Bonn,
+Germany
+}
+\email{bianchi@math.uni-bonn.de}
+\date{\today}
+\maketitle
+
+First, I would like to thank the referee for the meticulous work he/she made
+in reviewing my article.
+
+I have accepted almost all corrections and suggested improvements, but in the following cases
+I have followed a different way than the one proposed by the referee; I will describe briefly
+the reasons for my choice, and I remain open for further discussion.
+\begin{itemize}
+ \item The referee writes \emph{p.3, line 2: The condition that $g\geq 2$ is needed for $\mathrm{Diff}(\Sigma_{g,1})$ to be contractible.}\\
+ Since we are working with surfaces with non-empty boundary, this result should also be true in genera $0$ and $1$; differently
+ the components of $\mathrm{Diff}^+(\Sigma_g)$ are not contractible for $g=0,1$. I have briefly reminded the reader of this fact in the article.
+ \item The referee writes \emph{p.19, line −11: ``$\mathcal{N}' = (\mathcal{N} \setminus c_1 ) \cup \mathcal{D}$''
+ Since $\mathcal{N}$ is a neighborhood of $\mathcal{D} \cup c_1 \cup\dots\cup c_m$, it contains the neighborhood of
+ $c_1$. It seems that the author wants to take the complement of the neighborhood
+ of $c_1$ in the definition of $\mathcal{N}'$.}\\
+ This is not necessary: $\mathcal{N}' = (\mathcal{N} \setminus c_1 ) \cup \mathcal{D}$ is already an open set, contains
+ $\mathcal{D} \cup c_2 \cup\dots\cup c_m$ and is disjoint from $c_1\setminus\mathcal{D}$. One can reduce further
+ $\mathcal{N}'$ by deleting an entire neighborhood of $c_1$, and then taking again the union with $\mathcal{D}$, but
+ this is not necessary for the argument to work. I have stressed in the article that $\mathcal{N}' = (\mathcal{N} \setminus c_1 ) \cup \mathcal{D}$
+ is already open.
+ \item The referee writes \emph{Section 6: How about mentioning the articles ``Stable cohomology of the mapping
+ class group with symplectic coefficients and the universal Abel-Jacobi map'' written by Eduard Looijenga
+ and ``Characteristic classes of surface bundles'' written
+ by Shigeyuki Morita. They compute the integral stable cohomology ring of the
+ mapping class group of punctured surface with boundary.}\\
+ It seems to me that Morita's article (BULLETIN   (New  Series)  OF  THE  AMERICAN  MATHEMATICAL   SOCIETY
+ Volume  11,  Number  2, pages 386-388,  October   1984) only deals with characteristic classes of
+ $\Sigma_g$-bundles (i.e., no puncture, no boundary) over $\mathbb{Q}$. Looijenga's article
+ (Journal of Algebraic Geometry. 5. January 1994) also deals mainly with coefficients in $\mathbb{Q}$.
+ It seems to me that the only with coefficients in $\mathbb{Z}$ in Looijenga's article is Proposition 2.1:
+ however, only the case of \emph{ordered} punctures is treated, whereas the case of unordered
+ punctures follows easily only over $\mathbb{Q}$, but, in my opinion, not over $\mathbb{Z}_2$.
+ The stable ($g=\infty$), unordered ($m<\infty$ unordered punctures) case with coefficients
+ in $\mathbb{Z}_2$ (actually any field) is rather treated in the article of B\"odigheimer and Tillmann,
+ which I already cite. Therefore I would leave these two suggested references out. 
+\end{itemize}
+\end{document}

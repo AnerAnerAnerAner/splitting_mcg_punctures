@@ -1,0 +1,100 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd,mathrsfs,mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[hyphens]{url}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+\setlength\parindent{0pt}
+
+\hyphenation{e-qui-va-riant se-cond ho-mo-lo-gy co-ho-mo-lo-gy}
+% \setlength{\parindent}{6pt}
+
+\theoremstyle{plain}
+    \newtheorem{thm}{Theorem}[section]
+    \newtheorem{lem}[thm]   {Lemma}
+    \newtheorem{cor}[thm]   {Corollary}
+
+\theoremstyle{definition}
+    \newtheorem{defn}[thm]  {Definition}
+    \newtheorem{conj}[thm]{Conjecture}
+    \newtheorem{ex}{Example}
+
+\input{macros.tex}
+    
+\begin{document}
+
+\title{Rational homology of configuration spaces of surfaces}
+
+\author{Andrea Bianchi}
+
+\address{Mathematics Institute,
+University of Bonn,
+Endenicher Allee 60, Bonn,
+Germany
+}
+
+
+\email{bianchi@math.uni-bonn.de}
+
+\date{\today}
+
+\maketitle
+Let $C_n(\Sg)$ denote the unordered configuration spaces of $n$ points
+on the surface $\Sg$. In this note I list all the properties I know about $H_*\pa{C_n(\Sg);\Q}$.
+Many of these properties can be found somewhere in the literature,
+From now on rational coefficients in homology are always understood.
+
+Let $C_{\bullet}(\Sg):=\coprod_{n\geq 0}C_n(\Sg)$, which is a module over the 
+(homotopy) associative H-space $C_{\bullet}(\C)=\coprod_{n\geq 0}C_n(\C)$.
+
+Then $\M:=H_*(C_{\bullet}(\Sg)$ is a bigraded $\Gamma_{g,1}$-representation over the bigraded Pontryiagin
+ring $H_*(C_{\bullet}(\C))\cong\Q[\epsilon]\otimes \Lambda (\alpha)$, where $\epsilon$ has
+bidegree (0,1) and $\alpha$ has bidegree (1,2). The bidegree $(*,\bullet)$ is given by
+the homological degree $*$ and the weight (number of points used) $\bullet$.
+
+Let $\bH=H_1(\Sg)$, concentrated in bidegree (2,2), and let $\cH=H_1(\Sg)$, concentrated in bidegree (1,1).
+The following hold:
+
+\begin{enumerate}
+ \item $\M$ is in general neither a free $\Q[\epsilon]\otimes \Lambda (\alpha)$-module (only for $g=0$),
+ nor a symplectic $\Gamma_{g,1}$-representation (only for $g\leq 1$, see the \emph{rational counterexample}
+ in my article).
+ \item Nevertheless $\M$ is a free $\Q[\epsilon]$-module (see work of B\"odigheimer and Tillmann), and the Johnson's kernel
+ $\mathcal{J}_{g,1}\subset\Gamma_{g,1}$ acts trivially on it (one can check that
+ separating Dehn twists act trivially on a generatring set of $\M$).
+ \item Let $\Sym(\bH)$ denote the symmetric algebra on $\bH$, which is a bigraded ring with a
+ symplectic action of $\Gamma_{g,1}$. Then $\M$ has a natural structure of (equivariant)
+ $\Sym(\bH)$-module, i.e. there is a $\Gamma_{g,1}$-equivariant map
+ \[
+  \mu\colon\Sym(\bH)\otimes \M\to \M
+ \]
+ which satisfies the usual associativity, it preserves the bidigree and it is compatible with
+ the action of the ring $\Q[\epsilon]\otimes \Lambda (\alpha)$ (this seems true to me, although
+ I have never written down a formal proof of it).
+ \item One can filter $\M$ by the submodules
+ \[
+  \M\supset\bH\cdot\M\supset\bH^2\cdot\M\supset\bH^3\cdot \M.
+ \]
+ Every $\bH^k\cdot\M$ is bigraded, $\Gamma_{g,1}$-invariant, and an equivariant module
+ over $\Q[\epsilon]\otimes \Lambda (\alpha)\otimes \Sym(\bH)$. The associated graded,
+ denoted $grad\M$, is also a bigraded $\Gamma_{g,1}$-equivariant module over $\Q[\epsilon]\otimes \Lambda (\alpha)\otimes \Sym(\bH)$.
+ \item As such, $grad\M$ is isomorphic to the following
+ \[
+  grad\M\cong \Q[\epsilon]\otimes \Sym(\bH)\otimes [\alpha\otimes\coker(\cdot\wedge\omega)\oplus\Ker(\cdot\wedge\omega)].
+ \]
+ Here $(\cdot\wedge\omega)\colon\Lambda(\cH)\to\Lambda(\cH)$ is a map of bidegree (-2,-2), given by contracting
+ an element of the exterior algebra $\Lambda(\cH)$ with the intersection form of the surface $\omega\in\Lambda_2(\cH^*)$.
+ The action of $\Gamma_{g,1}$ is symplectic on $grad\M$. Multiplication by $\alpha$ is trivial on the summand
+ $\alpha\otimes\coker(\cdot\wedge\omega)$ and is induced by the natural map
+ $\Ker(\cdot\wedge\omega)\subset \Lambda(\cH)\to\coker(\cdot\wedge\omega)$ on the other summand (this should
+ also be entailed in the work of Pagaria).
+\end{enumerate}
+\end{document}
+
+
+
+
